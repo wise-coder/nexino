@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colours */
+  --color-nexino-dark: #07111F;
+  --color-nexino-navy: #06164A;
+  --color-nexino-blue: #0094E8;
+  --color-nexino-green: #12C878;
+  --color-nexino-white: #FFFFFF;
+  --color-nexino-off-white: #F7F9FC;
+  --color-nexino-light-grey: #EEF2F6;
+  --color-nexino-text: #101828;
+  --color-nexino-text-secondary: #667085;
+  --color-nexino-border: #E4E7EC;
+
+  /* Fonts */
+  --font-sans: var(--font-plus-jakarta), 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+  /* Spacing extras */
+  --spacing-section: 6rem;
+  --spacing-section-sm: 4rem;
+}
+
+/* ── Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #101828;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Reduced heading scale for a cleaner, more balanced layout */
+:where(h1) {
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.04em !important;
+}
+
+:where(h2) {
+  font-size: clamp(1.75rem, 3vw, 2.75rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.03em !important;
+}
+
+:where(h3) {
+  font-size: clamp(1.25rem, 2vw, 1.55rem) !important;
+  line-height: 1.15 !important;
+}
+
+:where(h4),
+:where(h5),
+:where(h6) {
+  font-size: 1.05rem !important;
+  line-height: 1.2 !important;
+}
+
+/* ── Gradient utility ── */
+/* ── Focus visible ── */
+:focus-visible {
+  outline: 2px solid #0094E8;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ── Skip link ── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.25rem;
+  background: #0094E8;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  z-index: 9999;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #EEF2F6; }
+::-webkit-scrollbar-thumb { background: #0094E8; border-radius: 3px; }
+
+/* ── Marquee animation ── */
+@keyframes marquee-ltr {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes heroPan {
+  0% {
+    transform: scale(1.05) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.12) translate3d(-2%, -1%, 0);
+  }
+}
+
+@keyframes heroDrift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(-1.5%, -1%, 0) scale(1.04);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-ltr 28s linear infinite;
+}
+
+.animate-hero-drift {
+  animation: heroDrift 14s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee { animation: none; }
+  .animate-hero-drift { animation: none; }
+}
+
+/* ── Page transitions ── */
+.page-transition-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #111111;
+  z-index: 9999;
+  transform-origin: left;
+}
+
+/* ── Section utility ── */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}

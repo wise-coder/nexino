@@ -122,14 +122,6 @@ export default async function ServiceDetailPage({ params }: Props) {
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
                 <div className="absolute inset-0 bg-nexino-dark/65" />
-                <div className="absolute inset-0 p-5 lg:p-6 flex items-end text-white">
-                  <div>
-                    <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/70">Visual summary</p>
-                    <p className="mt-2 text-sm leading-relaxed text-white/85 max-w-md">
-                      Each service page now uses a supporting image to make the scope and context easier to scan.
-                    </p>
-                  </div>
-                </div>
               </div>
               <div className="bg-nexino-off-white rounded-2xl border border-nexino-border p-8 space-y-4">
                 <h3 className="font-bold text-nexino-text text-lg">Problems this addresses</h3>

@@ -22,7 +22,7 @@ export function CompanyIntroSection() {
               id="intro-heading"
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-nexino-text leading-tight tracking-tight"
             >
-              A technology partner that listens before building.
+              A technology partner for intelligent systems and digital operations.
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.1} direction="left">
@@ -31,7 +31,7 @@ export function CompanyIntroSection() {
                 Every organisation has different goals, users and operational challenges. Nexino begins by understanding what you need, who will use the solution and what success should look like.
               </p>
               <p className="text-lg leading-relaxed text-nexino-text-secondary">
-                We then help you plan, design and develop a practical digital solution that fits your organisation.
+                We then help you plan, engineer and deliver practical technology that can include software platforms, AI-enabled tools, automation, cloud infrastructure, embedded systems and modern websites where they add value.
               </p>
               <Link
                 href="/about"
@@ -44,8 +44,8 @@ export function CompanyIntroSection() {
               <div className="relative overflow-hidden rounded-[28px] border border-nexino-border bg-nexino-off-white shadow-xl shadow-nexino-dark/5">
                 <div className="relative aspect-[4/5]">
                   <Image
-                    src="/images/home/software-collaboration-team.jpg"
-                    alt="Technology team collaborating around laptops and screens in a modern office"
+                    src="/images/new/team-coding-top-view.jpg"
+                    alt="Team members collaborating around a laptop in an overhead coding session"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 42vw"

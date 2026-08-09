@@ -19,7 +19,7 @@ const NexinoHeroObject = dynamic(
 );
 
 const description =
-  'Nexino Technologies Ltd designs and develops professional websites, custom business systems, web applications, automation tools and intelligent digital solutions built around your goals.';
+  'Nexino Technologies Ltd designs and develops intelligent systems, software platforms, automation tools, cloud solutions and connected digital products built around your goals.';
 
 export function HeroSection() {
   const reduceMotion = useReducedMotion() ?? false;
@@ -60,8 +60,8 @@ export function HeroSection() {
               transition={{ duration: 0.65, delay: 0.05, ease: 'easeOut' }}
               className="max-w-3xl text-[clamp(2.35rem,4.6vw,4.35rem)] font-bold leading-[0.96] tracking-tight text-nexino-text"
             >
-              <span className="block">Build the website or system</span>
-              <span className="block">your organisation needs.</span>
+              <span className="block">Build intelligent systems</span>
+              <span className="block">your organisation can rely on.</span>
             </motion.h1>
 
             <motion.p
@@ -74,7 +74,7 @@ export function HeroSection() {
             </motion.p>
 
             <p className="max-w-2xl text-sm leading-relaxed text-nexino-text-secondary">
-              You do not need a technical specification to get started. Tell us what you want to build or improve, and we will guide you through the next steps.
+              You do not need a technical specification to get started. Tell us what you want to build, improve or automate, and we will guide you through the next steps.
             </p>
 
             <motion.div

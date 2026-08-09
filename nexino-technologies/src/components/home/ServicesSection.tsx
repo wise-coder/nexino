@@ -10,9 +10,9 @@ import { Container } from '@/components/shared/Container';
 const homeServices = [
   {
     number: '01',
-    title: 'We need a professional website',
+    title: 'We need a digital presence that feels credible',
     slug: 'corporate-websites',
-    description: 'For organisations that need a clear, credible and mobile-friendly online presence.',
+    description: 'For organisations that need a clear, credible and mobile-friendly presence that supports trust and communication.',
     capabilities: [
       'Professional company presentation',
       'Mobile-friendly experience',
@@ -22,9 +22,9 @@ const homeServices = [
       'Easy future updates',
     ],
     accentColor: '#111111',
-    image: '/images/services/corporate-websites.jpg',
-    alt: 'Team planning a corporate website and digital strategy around a laptop',
-    cta: 'Request a Website Quote',
+    image: '/images/new/responsive-devices.jpg',
+    alt: 'Responsive website displayed across desktop, tablet and mobile devices',
+    cta: 'Request a Proposal',
   },
   {
     number: '02',
@@ -40,8 +40,8 @@ const homeServices = [
       'Workflow platforms',
     ],
     accentColor: '#111111',
-    image: '/images/services/business-intelligence.jpg',
-    alt: 'Business intelligence dashboard with charts and data insights',
+    image: '/images/new/laptop-code.jpg',
+    alt: 'Developer working on a laptop with code visible on screen',
     cta: 'Discuss My System',
   },
   {
@@ -58,8 +58,8 @@ const homeServices = [
       'WhatsApp workflows',
     ],
     accentColor: '#111111',
-    image: '/images/services/workflow-automation.jpg',
-    alt: 'People reviewing automated workflow and analytics dashboards',
+    image: '/images/new/smartphone-icons.jpg',
+    alt: 'Smartphone interface with communication and automation icons',
     cta: 'Explore Automation',
   },
   {
@@ -76,8 +76,8 @@ const homeServices = [
       'Ongoing maintenance',
     ],
     accentColor: '#111111',
-    image: '/images/services/cloud-infrastructure.jpg',
-    alt: 'Blue-lit server racks in a modern data center',
+    image: '/images/new/laptop-coffee.jpg',
+    alt: 'Modern laptop workspace with coffee and plants on a wooden table',
     cta: 'Improve My Platform',
   },
   {
@@ -94,8 +94,8 @@ const homeServices = [
       'Next-step planning',
     ],
     accentColor: '#111111',
-    image: '/images/services/technical-research.jpg',
-    alt: 'A researcher examining technical information in a lab setting',
+    image: '/images/new/phone-business.jpg',
+    alt: 'Business smartphone concept used for professional communication',
     cta: 'Book a Consultation',
     href: '/contact?type=project',
   },
@@ -113,7 +113,7 @@ export function ServicesSection() {
             What do you need help with?
           </p>
           <h2 id="services-heading" className="text-4xl sm:text-5xl font-bold text-nexino-text">
-            Practical solutions for real project needs.
+            Practical solutions for real operational needs.
           </h2>
         </div>
 

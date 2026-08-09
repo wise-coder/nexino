@@ -41,8 +41,8 @@ const solutions: SolutionItem[] = [
     visual: 'bg-nexino-off-white',
     reverse: true,
     image: {
-      src: '/images/home/ai-technology-icons.png',
-      alt: 'Abstract artificial intelligence and digital technology icons arranged in a modern grid',
+      src: '/images/new/ai-robot-hand.jpg',
+      alt: 'Futuristic AI robot hand illustration on a dark background',
       label: 'AI and automation',
     },
   },
@@ -55,8 +55,8 @@ const solutions: SolutionItem[] = [
     visual: 'bg-nexino-off-white',
     reverse: false,
     image: {
-      src: '/images/home/data-center-server-rack.jpg',
-      alt: 'Blue-lit server rack in a modern data center showing cloud infrastructure hardware',
+      src: '/images/new/cloud-network.jpg',
+      alt: 'Cloud computing network illustration with connected digital nodes',
       label: 'Cloud and infrastructure',
     },
   },

@@ -67,7 +67,7 @@ export function WhyNexinoSection() {
           >
             Built for more than
             <br />
-            <span className="font-semibold text-white">product launch.</span>
+            <span className="font-semibold text-white">web presence.</span>
           </h2>
         </div>
 
@@ -140,3 +140,4 @@ export function WhyNexinoSection() {
     </section>
   );
 }
+

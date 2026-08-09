@@ -23,8 +23,8 @@ export function IndustriesSection() {
             <div className="relative overflow-hidden rounded-[28px] border border-nexino-border bg-white shadow-xl shadow-nexino-dark/5">
               <div className="relative aspect-[16/10]">
                 <Image
-                  src="/images/home/industrial-tablet-engineer.jpg"
-                  alt="Engineer reviewing industrial data on a tablet inside a modern factory environment"
+                  src="/images/new/industrial-network.jpg"
+                  alt="Industrial networking technology illustration with connected systems"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 45vw"

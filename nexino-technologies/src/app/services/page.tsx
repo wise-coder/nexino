@@ -8,7 +8,6 @@ import { CTASection } from '@/components/shared/CTASection';
 import { Accordion } from '@/components/shared/Accordion';
 import { AnimatedSection } from '@/components/motion/AnimatedSection';
 import { generalFaqs } from '@/data/faqs';
-import { serviceImages } from '@/data/image-assets';
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -31,7 +30,10 @@ const serviceCategories = [
     ],
     highlight: 'bg-nexino-blue/5 border-nexino-blue/20',
     linkHoverClass: 'group-hover:text-nexino-blue',
-    image: serviceImages['ui-ux-design'],
+    image: {
+      src: '/images/new/desktop-devices.jpg',
+      alt: 'Website displayed across desktop, tablet and mobile devices',
+    },
   },
   {
     id: 'ai-automation',
@@ -46,7 +48,10 @@ const serviceCategories = [
     ],
     highlight: 'bg-nexino-green/5 border-nexino-green/20',
     linkHoverClass: 'group-hover:text-nexino-green',
-    image: serviceImages['workflow-automation'],
+    image: {
+      src: '/images/new/software-developer-desk.jpg',
+      alt: 'Developer working at a desk with a laptop and technical setup',
+    },
   },
   {
     id: 'cloud-infrastructure',
@@ -60,7 +65,10 @@ const serviceCategories = [
     ],
     highlight: 'bg-nexino-blue/5 border-nexino-blue/20',
     linkHoverClass: 'group-hover:text-nexino-blue',
-    image: serviceImages['cloud-infrastructure'],
+    image: {
+      src: '/images/new/monitor-desk.jpg',
+      alt: 'Modern workstation with multiple monitors in a technical workspace',
+    },
   },
   {
     id: 'data-research',
@@ -74,7 +82,10 @@ const serviceCategories = [
     ],
     highlight: 'bg-nexino-green/5 border-nexino-green/20',
     linkHoverClass: 'group-hover:text-nexino-green',
-    image: serviceImages['business-intelligence'],
+    image: {
+      src: '/images/new/social-communication.jpg',
+      alt: 'Digital communication and social connection concept image',
+    },
   },
   {
     id: 'engineering',
@@ -88,7 +99,10 @@ const serviceCategories = [
     ],
     highlight: 'bg-nexino-blue/5 border-nexino-blue/20',
     linkHoverClass: 'group-hover:text-nexino-blue',
-    image: serviceImages['hardware-software-integration'],
+    image: {
+      src: '/images/new/woman-social-phone.jpg',
+      alt: 'Professional using a smartphone for connected digital work',
+    },
   },
 ];
 
@@ -124,8 +138,8 @@ export default function ServicesPage() {
             <AnimatedSection delay={0.1} direction="left">
               <div className="relative overflow-hidden rounded-[32px] border border-nexino-border shadow-2xl shadow-nexino-dark/10 aspect-[4/3]">
                 <Image
-                  src="/images/services/saas-development.jpg"
-                  alt="A laptop showing a SaaS dashboard with charts and product metrics"
+                  src="/images/home/software-collaboration-team.jpg"
+                  alt="Team collaborating around a laptop in a modern office"
                   fill
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105"
@@ -218,8 +232,8 @@ export default function ServicesPage() {
               />
               <div className="mt-8 relative overflow-hidden rounded-[28px] border border-nexino-border aspect-[4/5]">
                 <Image
-                  src="/images/services/customer-support-automation.jpg"
-                  alt="Customer support agents in a call center using headsets and computers"
+                  src="/images/home/data-center-server-rack.jpg"
+                  alt="Blue-lit server racks in a modern data center"
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 40vw"

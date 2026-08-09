@@ -49,8 +49,8 @@ export default function IndustriesPage() {
             <AnimatedSection delay={0.1} direction="left">
               <div className="relative overflow-hidden rounded-[32px] border border-white/10 shadow-2xl shadow-black/20 aspect-[4/3]">
                 <Image
-                  src="/images/industries/intelligent-infrastructure.jpg"
-                  alt="Smart infrastructure and connected systems in a modern environment"
+                  src="/images/home/industrial-tablet-engineer.jpg"
+                  alt="Engineer reviewing industrial data on a tablet inside a factory environment"
                   fill
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105"

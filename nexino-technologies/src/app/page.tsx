@@ -12,11 +12,11 @@ import { SelectedWorkSection } from '@/components/home/SelectedWorkSection';
 import { CTASection } from '@/components/shared/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Nexino Technologies Ltd — Websites, Systems and Automation Built for Growth',
+  title: 'Nexino Technologies Ltd — Intelligent Systems Built for Growth',
   description:
-    'Nexino Technologies Ltd helps businesses and organisations design, build and improve websites, digital platforms, business systems, automation tools and intelligent technology solutions.',
+    'Nexino Technologies Ltd helps businesses and organisations design, build and improve intelligent systems, digital platforms, automation tools, cloud solutions and connected technology products.',
   openGraph: {
-    title: 'Nexino Technologies Ltd — Websites, Systems and Automation Built for Growth',
+    title: 'Nexino Technologies Ltd — Intelligent Systems Built for Growth',
     description: 'A practical technology partner for organisations that want to build, improve or automate.',
   },
 };
@@ -36,11 +36,12 @@ export default function HomePage() {
       <SelectedWorkSection />
       <CTASection
         label="Ready to start?"
-        title="Ready to build or improve your digital system?"
-        description="Tell Nexino what your organisation needs. We can help you plan, design, develop and support the right solution."
+        title="Ready to build or improve your technology capability?"
+        description="Tell Nexino what your organisation needs. We can help you plan, engineer, develop and support the right solution."
         primaryCta={{ label: 'Start Your Project', href: '/contact?type=project' }}
         secondaryCta={{ label: 'Contact Nexino', href: '/contact' }}
       />
     </>
   );
 }
+

@@ -58,8 +58,8 @@ export default function WorkPage() {
             <AnimatedSection delay={0.1} direction="left">
               <div className="relative overflow-hidden rounded-[32px] border border-white/10 shadow-2xl shadow-black/20 aspect-[4/3]">
                 <Image
-                  src="/images/work/operations-dashboard.jpg"
-                  alt="Analytics dashboard interface shown on a laptop screen"
+                  src="/images/home/ai-technology-icons.png"
+                  alt="Abstract artificial intelligence and digital technology icons"
                   fill
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105"

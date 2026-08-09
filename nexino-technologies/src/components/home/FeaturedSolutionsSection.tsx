@@ -112,10 +112,7 @@ export function FeaturedSolutionsSection() {
                         />
                         <div className="absolute inset-0 bg-nexino-dark/65" aria-hidden="true" />
                         <div className="absolute inset-x-0 bottom-0 p-5 lg:p-6 text-white">
-                          <p className="text-[0.65rem] font-bold uppercase tracking-[0.22em] text-white/75">
-                            Visual focus
-                          </p>
-                          <p className="mt-2 text-lg font-semibold leading-tight max-w-xs">
+                          <p className="text-lg font-semibold leading-tight max-w-xs">
                             {sol.image.label}
                           </p>
                         </div>

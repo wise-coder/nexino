@@ -88,12 +88,11 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <div className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-between text-white">
                   <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold backdrop-blur">
                     <span className="w-2 h-2 rounded-full bg-nexino-green" aria-hidden="true" />
-                    Service focus
+                    Service area
                   </span>
                   <div>
-                    <p className="text-sm uppercase tracking-[0.18em] text-white/60">Outcome</p>
                     <h2 className="mt-2 text-2xl font-bold leading-tight max-w-md">
-                      {service.shortTitle} designed to solve a specific business need.
+                      {service.shortTitle} designed for practical business use.
                     </h2>
                   </div>
                 </div>

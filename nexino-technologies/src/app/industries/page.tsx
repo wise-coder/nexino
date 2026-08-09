@@ -57,15 +57,14 @@ export default function IndustriesPage() {
                   sizes="(max-width: 1024px) 100vw, 45vw"
                 />
                 <div className="absolute inset-0 bg-nexino-dark/65" />
-                <div className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-between text-white">
-                  <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold backdrop-blur">
-                    <span className="w-2 h-2 rounded-full bg-nexino-green" aria-hidden="true" />
-                    Built for real-world conditions
-                  </span>
+                  <div className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-between text-white">
+                    <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold backdrop-blur">
+                      <span className="w-2 h-2 rounded-full bg-nexino-green" aria-hidden="true" />
+                    Practical conditions
+                    </span>
                   <div>
-                    <p className="text-sm uppercase tracking-[0.18em] text-white/60">Sector design</p>
                     <h2 className="mt-2 text-2xl font-bold leading-tight max-w-md">
-                      We tailor the same core capabilities to very different operating environments.
+                      We tailor the same core capabilities to different operating environments.
                     </h2>
                   </div>
                 </div>

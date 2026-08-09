@@ -74,13 +74,9 @@ export default function AboutPage() {
                     Kigali based, globally minded
                   </span>
                   <div className="space-y-4">
-                    <p className="text-sm uppercase tracking-[0.18em] text-white/60">Built around people</p>
                     <h2 className="text-2xl font-bold leading-tight max-w-md">
-                      Collaboration, research and delivery are all part of the same process.
+                      Collaboration, research and delivery move together.
                     </h2>
-                    <p className="text-sm text-white/70 leading-relaxed max-w-md">
-                      We stay close to the work, keep the process practical and build solutions that teams can actually use.
-                    </p>
                   </div>
                 </div>
               </div>
@@ -112,7 +108,7 @@ export default function AboutPage() {
                 </p>
 
                 <div className="relative overflow-hidden rounded-2xl border border-nexino-border bg-nexino-off-white shadow-lg shadow-nexino-dark/5 aspect-[16/10]">
-                <Image
+                  <Image
                     src="/images/new/laptop-coffee.jpg"
                     alt="Modern laptop workspace with coffee and plants on a wooden table"
                     fill
@@ -121,12 +117,9 @@ export default function AboutPage() {
                   />
                   <div className="absolute inset-0 bg-nexino-dark/65" />
                   <div className="absolute inset-0 p-5 lg:p-6 flex items-end text-white">
-                    <div>
-                      <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/70">Working environment</p>
-                      <p className="mt-2 text-sm text-white/80 max-w-md">
-                        We keep communication clear and the process practical so clients always know what is happening next.
-                      </p>
-                    </div>
+                    <p className="text-sm font-semibold text-white/85 max-w-md">
+                      Clear communication and practical progress updates.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -139,7 +132,7 @@ export default function AboutPage() {
         <Container>
           <AnimatedSection className="mb-14 text-center">
             <h2 id="vision-mission-heading" className="text-4xl sm:text-5xl font-bold text-nexino-text">
-              What clients can expect from us.
+              What clients can expect.
             </h2>
           </AnimatedSection>
           <div className="grid md:grid-cols-2 gap-8">
@@ -150,7 +143,7 @@ export default function AboutPage() {
                 </div>
               <h3 className="text-2xl font-bold text-nexino-text">Vision</h3>
               <p className="text-nexino-text-secondary leading-relaxed text-lg">
-                  Honest discussions about what is possible, what the project needs and the best practical next step.
+                Clear advice on what is possible, what the project needs and the best practical next step.
               </p>
               </div>
             </AnimatedSection>
@@ -161,7 +154,7 @@ export default function AboutPage() {
                 </div>
               <h3 className="text-2xl font-bold text-white">Mission</h3>
               <p className="text-white/70 leading-relaxed text-lg">
-                  Clear requirements before development, progress updates during the work, opportunities to review the solution and support options after delivery.
+                Clear requirements before development, progress updates during the work, review points during delivery and support options after launch.
               </p>
               </div>
             </AnimatedSection>
@@ -241,16 +234,15 @@ export default function AboutPage() {
                     className="object-cover transition-transform duration-700 hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 40vw"
                   />
-                  <div className="absolute inset-0 bg-nexino-dark/50" />
-                  <div className="absolute inset-0 p-5 lg:p-6 flex items-end text-white">
-                    <div>
-                      <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/70">Industry lens</p>
-                      <p className="mt-2 text-sm text-white/80 max-w-md">
-                        We adapt the same core capabilities to business, infrastructure, mining, construction and health contexts.
-                      </p>
-                    </div>
+                <div className="absolute inset-0 bg-nexino-dark/50" />
+                <div className="absolute inset-0 p-5 lg:p-6 flex items-end text-white">
+                  <div>
+                    <p className="text-sm font-semibold text-white/85 max-w-md">
+                      We adapt the same core capabilities to business, infrastructure, mining, construction and health contexts.
+                    </p>
                   </div>
                 </div>
+              </div>
 
                 <ul className="space-y-4" role="list">
                   {industries.map((ind, i) => (

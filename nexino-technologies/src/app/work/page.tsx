@@ -72,9 +72,8 @@ export default function WorkPage() {
                     Prototypes, concepts and research
                   </span>
                   <div>
-                    <p className="text-sm uppercase tracking-[0.18em] text-white/60">Showcase</p>
                     <h2 className="mt-2 text-2xl font-bold leading-tight max-w-md">
-                      Some items are exploratory, some are internal concepts and some show likely client solutions.
+                      Some items are exploratory, some are internal concepts and some show likely client directions.
                     </h2>
                   </div>
                 </div>

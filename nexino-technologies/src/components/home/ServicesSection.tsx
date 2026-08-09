@@ -185,12 +185,6 @@ export function ServicesSection() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-nexino-dark/65" />
-                  <div className="absolute inset-0 p-5 lg:p-6 flex flex-col justify-end text-white">
-                    <p className="text-[0.65rem] font-bold uppercase tracking-[0.22em] text-white/75">
-                      Service focus
-                    </p>
-                    <p className="mt-2 text-lg font-semibold leading-tight max-w-xs">{active.title}</p>
-                  </div>
                 </div>
 
                 <h3 className="text-2xl lg:text-3xl font-bold text-nexino-text">{active.title}</h3>

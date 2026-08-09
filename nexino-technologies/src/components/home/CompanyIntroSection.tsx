@@ -11,6 +11,8 @@ const capabilities = [
   { number: '04', title: 'Maintainable delivery', description: 'We build solutions that can be supported, updated and extended after launch.' },
 ];
 
+const trustMarks = ['Clear scope', 'Practical delivery', 'Support after launch'];
+
 export function CompanyIntroSection() {
   return (
     <section className="py-20 lg:py-28 bg-white" aria-labelledby="intro-heading">
@@ -28,10 +30,10 @@ export function CompanyIntroSection() {
           <AnimatedSection delay={0.1} direction="left">
             <div className="space-y-6 lg:pt-4">
               <p className="text-lg leading-relaxed text-nexino-text-secondary">
-                Every organisation has different goals, users and operational challenges. Nexino begins by understanding what you need, who will use the solution and what success should look like.
+                Every organisation has different goals, users and operational challenges. Nexino starts by understanding what you need, who will use the solution and what success should look like.
               </p>
               <p className="text-lg leading-relaxed text-nexino-text-secondary">
-                We then help you plan, engineer and deliver practical technology that can include software platforms, AI-enabled tools, automation, cloud infrastructure, embedded systems and modern websites where they add value.
+                We then help you plan, engineer and deliver practical technology across software platforms, AI-enabled tools, automation, cloud infrastructure, embedded systems and modern websites where they add value.
               </p>
               <Link
                 href="/about"
@@ -40,6 +42,17 @@ export function CompanyIntroSection() {
                 Tell Us About Your Project
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
+
+              <div className="flex flex-wrap gap-2 pt-1">
+                {trustMarks.map((mark) => (
+                  <span
+                    key={mark}
+                    className="inline-flex items-center rounded-full border border-nexino-border bg-nexino-off-white px-3 py-1 text-xs font-semibold text-nexino-text-secondary"
+                  >
+                    {mark}
+                  </span>
+                ))}
+              </div>
 
               <div className="relative overflow-hidden rounded-[28px] border border-nexino-border bg-nexino-off-white shadow-xl shadow-nexino-dark/5">
                 <div className="relative aspect-[4/5]">
@@ -52,11 +65,8 @@ export function CompanyIntroSection() {
                   />
                   <div className="absolute inset-0 bg-nexino-dark/70" aria-hidden="true" />
                   <div className="absolute inset-x-0 bottom-0 p-5 lg:p-6 text-white">
-                    <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/75">
-                      Practical partnership
-                    </p>
-                    <p className="mt-2 text-sm leading-relaxed text-white/85 max-w-md">
-                      Clear communication, thoughtful planning and practical delivery keep projects aligned with business needs.
+                    <p className="text-sm font-semibold tracking-[0.02em]">
+                      Clear communication and practical delivery.
                     </p>
                   </div>
                 </div>

@@ -2,7 +2,7 @@ import type { NavItem, MegaMenuServiceColumn, MegaMenuIndustryItem } from '@/typ
 
 export const mainNav: NavItem[] = [
   { label: 'Home', href: '/' },
-  { label: 'Company', href: '/about' },
+  { label: 'About', href: '/about' },
   { label: 'Services', href: '/services', megaMenu: 'services' },
   { label: 'Industries', href: '/industries', megaMenu: 'industries' },
   { label: 'Our Work', href: '/work' },
@@ -32,7 +32,7 @@ export const servicesMegaMenu: MegaMenuServiceColumn[] = [
     ],
   },
   {
-    heading: 'Cloud and Data',
+    heading: 'Cloud, Data and Infrastructure',
     items: [
       { label: 'Cloud Infrastructure', href: '/services/cloud-infrastructure' },
       { label: 'Hosting and Maintenance', href: '/services/hosting-maintenance' },
@@ -49,7 +49,6 @@ export const servicesMegaMenu: MegaMenuServiceColumn[] = [
       { label: 'Custom PCB Design', href: '/services/pcb-design' },
       { label: 'Hardware and Software Integration', href: '/services/hardware-software-integration' },
       { label: 'Intelligent Infrastructure', href: '/services/intelligent-infrastructure' },
-      { label: 'Industry Technology Solutions', href: '/services/industry-technology-solutions' },
     ],
   },
 ];

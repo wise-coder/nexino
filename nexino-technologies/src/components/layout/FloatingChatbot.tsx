@@ -18,7 +18,7 @@ const greetingMessage: ChatMessage = {
   id: 'greeting',
   role: 'assistant',
   content:
-    `Hi, I am Nexino Assistant. Ask me about websites, systems, AI, automation, hosting, data, industries or support. I can search ${chatbotFaqs.length} likely questions and answers.`,
+    `Hi, I am Nexino Assistant. Ask me about websites, systems, AI, automation, hosting, data, industries, pricing or support. I can search ${chatbotFaqs.length} likely questions and answers.`,
 };
 
 export function FloatingChatbot() {
@@ -47,7 +47,8 @@ export function FloatingChatbot() {
     const trimmed = question.trim();
     if (!trimmed) return;
 
-    const answer = getChatbotAnswer(trimmed);
+    const previousUserQuery = [...messages].reverse().find((message) => message.role === 'user')?.content;
+    const answer = getChatbotAnswer(trimmed, { previousUserQuery });
 
     setMessages((current) => [
       ...current,

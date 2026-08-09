@@ -1,8 +1,14 @@
 import type { FaqItem } from '@/types/common';
+import { allServices } from '@/data/services';
+import { contactFaqs, generalFaqs } from '@/data/faqs';
 
 export type ChatbotFaq = FaqItem & {
   id: string;
   category: string;
+};
+
+export type ChatbotAnswer = ChatbotFaq & {
+  matchedQuestion?: string;
 };
 
 type Topic = {
@@ -12,6 +18,14 @@ type Topic = {
   focus: string;
   answer?: string;
   questions?: string[];
+};
+
+type ChatbotContext = {
+  previousUserQuery?: string;
+};
+
+type ServiceFaq = ChatbotFaq & {
+  serviceSlug?: string;
 };
 
 const genericQuestionTemplates = [
@@ -441,7 +455,7 @@ function buildQuestions(topic: Topic) {
   return genericQuestionTemplates.map((template) => template.replace('{subject}', topic.subject));
 }
 
-export const chatbotFaqs: ChatbotFaq[] = chatbotTopics.flatMap((topic) =>
+const topicFaqs: ChatbotFaq[] = chatbotTopics.flatMap((topic) =>
   buildQuestions(topic).map((question, index) => ({
     id: `${topic.id}-${index + 1}`,
     category: topic.category,
@@ -450,7 +464,248 @@ export const chatbotFaqs: ChatbotFaq[] = chatbotTopics.flatMap((topic) =>
   })),
 );
 
-export const chatbotStarterQuestions = chatbotFaqs.slice(0, 10);
+function buildServiceFaqs(): ServiceFaq[] {
+  return allServices.flatMap((service) => {
+    const serviceTitle = service.shortTitle || service.title;
+    const serviceQuestionSet: ServiceFaq[] = [
+      {
+        id: `${service.slug}-overview`,
+        category: service.category,
+        question: `What is ${serviceTitle}?`,
+        answer: service.overview,
+        serviceSlug: service.slug,
+      },
+      {
+        id: `${service.slug}-help`,
+        category: service.category,
+        question: `Can you help with ${serviceTitle}?`,
+        answer: service.heroDescription,
+        serviceSlug: service.slug,
+      },
+      {
+        id: `${service.slug}-timelines`,
+        category: 'Process',
+        question: `How long does ${serviceTitle} take?`,
+        answer:
+          service.slug === 'corporate-websites'
+            ? 'A typical corporate website takes four to eight weeks depending on scope, content readiness and review cycles.'
+            : 'Timelines depend on scope, integrations and how ready the content is. After discovery we can give a realistic phase-by-phase plan.',
+        serviceSlug: service.slug,
+      },
+      {
+        id: `${service.slug}-pricing`,
+        category: 'Pricing',
+        question: `How much does ${serviceTitle} cost?`,
+        answer: buildServicePricingAnswer(service),
+        serviceSlug: service.slug,
+      },
+    ];
+
+    return serviceQuestionSet;
+  });
+}
+
+function buildServicePricingAnswer(service: (typeof allServices)[number]) {
+  if (service.slug === 'corporate-websites') {
+    return 'A 10-page corporate website is usually priced by scope rather than page count alone. As a practical starting point, a simple brochure-style build can sit in the lower budget band, while a more polished 10-page site with custom design, content support, SEO setup, forms or integrations can move into the next band. Send the page list and features you want, and we will help you narrow it down.';
+  }
+
+  return `Pricing for ${service.title} depends on scope, integrations, design depth and support needs. We usually confirm the core requirements first, then give a realistic estimate that fits the project.`;
+}
+
+export const chatbotFaqs: ChatbotFaq[] = [
+  ...topicFaqs,
+  ...buildServiceFaqs(),
+  ...generalFaqs.map((faq, index) => ({
+    id: `general-faq-${index + 1}`,
+    category: faq.category || 'General',
+    question: faq.question,
+    answer: faq.answer,
+  })),
+  ...contactFaqs.map((faq, index) => ({
+    id: `contact-faq-${index + 1}`,
+    category: faq.category || 'Contact',
+    question: faq.question,
+    answer: faq.answer,
+  })),
+];
+
+const curatedStarterQuestions = [
+  'What services do you offer?',
+  'How much does a website cost?',
+  'How long does a project take?',
+  'Can you build a corporate website for my business?',
+  'Can you build a custom system?',
+  'Do you offer hosting and maintenance?',
+  'Do you build AI chatbots or automation tools?',
+  'How do I start a project with Nexino Technologies Ltd?',
+];
+
+export const chatbotStarterQuestions = curatedStarterQuestions
+  .map((question) => chatbotFaqs.find((item) => normalise(item.question) === normalise(question)))
+  .filter((item): item is ChatbotFaq => Boolean(item));
+
+function isPricingIntent(query: string) {
+  return /\b(price|cost|quote|estimate|budget|fee|fees|rate|rates|pricing|money|how much|package|charge|charges)\b/i.test(query);
+}
+
+function isTimelineIntent(query: string) {
+  return /\b(timeline|timelines|time|long|how long|duration|deadline)\b/i.test(query);
+}
+
+function isServiceIntent(query: string) {
+  return /\b(service|services|offer|offers|build|create|make|develop|help with|can you)\b/i.test(query);
+}
+
+function isSupportIntent(query: string) {
+  return /\b(support|help|maintenance|maintenance and support|hosting|after launch|after-launch|contact|email|whatsapp|phone)\b/i.test(query);
+}
+
+function isGeneralCompanyIntent(query: string) {
+  return /\b(who are you|about nexino|what is nexino|what do you do|what can you do|tell me about nexino|where are you based|location|based in)\b/i.test(query);
+}
+
+function buildServicesOverviewAnswer() {
+  const serviceGroups = [
+    'websites',
+    'custom web applications',
+    'AI agents',
+    'business chatbots',
+    'WhatsApp automation',
+    'workflow automation',
+    'hosting and maintenance',
+    'cloud infrastructure',
+    'data analytics',
+    'business intelligence',
+    'embedded systems',
+    'PCB design',
+    'hardware-software integration',
+  ];
+
+  return `Nexino Technologies Ltd designs and builds ${serviceGroups.join(', ')}. We also help with project discovery, system integration, support and ongoing improvement so the solution fits the real business need rather than only the initial idea.`;
+}
+
+function buildContactAnswer() {
+  return `${buildSupportAnswer()} You can also contact Nexino Technologies Ltd through the form on the website, by email at nexinotechinologies@gmail.com, or via WhatsApp. If you share a clear summary of your project, we can help you decide the best next step.`;
+}
+
+function findServiceMention(query: string, previousUserQuery?: string) {
+  const combined = normalise(`${query} ${previousUserQuery ?? ''}`);
+  const queryTokens = tokenize(combined);
+
+  return allServices.find((service) => {
+    const serviceTerms = [service.title, service.shortTitle, service.slug]
+      .filter(Boolean)
+      .map((term) => normalise(term as string));
+
+    if (serviceTerms.some((term) => combined.includes(term))) {
+      return true;
+    }
+
+    if (service.slug === 'corporate-websites' && (combined.includes('website') || combined.includes('web pages'))) {
+      return true;
+    }
+
+    if (service.slug === 'hosting-maintenance' && (combined.includes('hosting') || combined.includes('maintenance'))) {
+      return true;
+    }
+
+    if (service.slug === 'business-chatbots' && combined.includes('chatbot')) {
+      return true;
+    }
+
+    if (service.slug === 'workflow-automation' && combined.includes('automation')) {
+      return true;
+    }
+
+    if (service.slug === 'data-analytics' && (combined.includes('data') || combined.includes('analytics'))) {
+      return true;
+    }
+
+    if (service.slug === 'embedded-systems' && (combined.includes('embedded') || combined.includes('hardware') || combined.includes('device'))) {
+      return true;
+    }
+
+    return queryTokens.some((token) => serviceTerms.some((term) => term.includes(token) || token.includes(term)));
+  });
+}
+
+function buildCompanyAnswer() {
+  return 'Nexino Technologies Ltd designs and builds websites, custom systems, AI tools, automation workflows, cloud infrastructure and embedded solutions. We focus on practical digital products that help organisations work better, serve users faster and grow with confidence.';
+}
+
+function buildSupportAnswer() {
+  return 'We support projects before and after launch through hosting, maintenance, updates, monitoring and practical follow-up. You can contact us by email, phone or WhatsApp, and we usually start by understanding the issue or the change you need.';
+}
+
+function buildPricingAnswer(query: string, service?: (typeof allServices)[number], previousUserQuery?: string) {
+  const pageMatch = `${query} ${previousUserQuery ?? ''}`.match(/(\d+)\s*(?:page|pages|web page|web pages)\b/i);
+  const pageCount = pageMatch ? Number(pageMatch[1]) : undefined;
+
+  if (service?.slug === 'corporate-websites' || /website|web pages/i.test(`${query} ${previousUserQuery ?? ''}`)) {
+    if (pageCount && pageCount >= 8) {
+      return `For a ${pageCount}-page website, we would usually price based on design depth, content support, forms, SEO setup and any integrations. A straightforward build can sit in a lower budget band, while a more polished site with custom sections and extra functionality moves higher. For a 10-page corporate website, a realistic starting conversation is usually in the 500,000 to 1,000,000 RWF range for a simple build, and 1,000,000 to 3,000,000 RWF when the project includes more custom design, content help or integrations.`;
+    }
+
+    return 'Website pricing depends on page count, design complexity, content support, forms, SEO setup and integrations. We do not treat it as one fixed package. For a standard corporate site, we usually start by understanding the page list and feature needs, then we recommend the most practical budget band.';
+  }
+
+  if (service) {
+    return `Pricing for ${service.title} depends on scope, integrations, design depth and support needs. We usually confirm the core requirements first, then provide a realistic estimate and possible phase-by-phase approach.`;
+  }
+
+  return 'Pricing depends on the scope, number of pages, integrations, content support and ongoing maintenance. If you share what you want to build, I can help estimate the right budget band and next steps.';
+}
+
+function buildTimelineAnswer(service?: (typeof allServices)[number]) {
+  if (service?.slug === 'corporate-websites') {
+    return 'A typical corporate website takes four to eight weeks depending on scope, content readiness and review cycles.';
+  }
+
+  if (service) {
+    return `Timelines for ${service.title} depend on scope, integrations and how ready the content is. After discovery we can give a realistic phase-by-phase plan.`;
+  }
+
+  return 'Timelines depend on the size of the scope, the number of integrations and how ready the content is. After discovery we can give a realistic phase-by-phase plan.';
+}
+
+function answerFromServiceQuestion(service: (typeof allServices)[number], query: string) {
+  const normalized = normalise(query);
+
+  if (isPricingIntent(query)) {
+    return {
+      id: `${service.slug}-pricing-answer`,
+      category: 'Pricing',
+      question: `How much does ${service.shortTitle || service.title} cost?`,
+      answer: buildPricingAnswer(query, service),
+    };
+  }
+
+  if (isTimelineIntent(query)) {
+    return {
+      id: `${service.slug}-timeline-answer`,
+      category: 'Process',
+      question: `How long does ${service.shortTitle || service.title} take?`,
+      answer: buildTimelineAnswer(service),
+    };
+  }
+
+  if (normalized.includes(normalise(service.title)) || normalized.includes(normalise(service.shortTitle || service.title))) {
+    return {
+      id: `${service.slug}-overview-answer`,
+      category: service.category,
+      question: `What is ${service.shortTitle || service.title}?`,
+      answer: service.overview,
+    };
+  }
+
+  return {
+    id: `${service.slug}-help-answer`,
+    category: service.category,
+    question: `Can you help with ${service.shortTitle || service.title}?`,
+    answer: service.heroDescription,
+  };
+}
 
 export function getChatbotMatches(query: string, limit = 5) {
   const cleanedQuery = normalise(query);
@@ -460,6 +715,11 @@ export function getChatbotMatches(query: string, limit = 5) {
   }
 
   const queryTokens = tokenize(query);
+  const service = findServiceMention(query);
+  const pricingIntent = isPricingIntent(query);
+  const timelineIntent = isTimelineIntent(query);
+  const supportIntent = isSupportIntent(query);
+  const companyIntent = isGeneralCompanyIntent(query);
 
   return [...chatbotFaqs]
     .map((item) => {
@@ -486,6 +746,29 @@ export function getChatbotMatches(query: string, limit = 5) {
         score += 8;
       }
 
+      if (pricingIntent && normalise(item.category).includes('pricing')) {
+        score += 20;
+      }
+
+      if (timelineIntent && normalise(item.category).includes('process')) {
+        score += 12;
+      }
+
+      if (supportIntent && ['contact', 'support & contact', 'hosting & maintenance'].includes(normalise(item.category))) {
+        score += 14;
+      }
+
+      if (companyIntent && normalise(item.category) === 'general') {
+        score += 14;
+      }
+
+      if (service) {
+        const serviceKey = normalise(service.shortTitle || service.title);
+        if (normalise(item.question).includes(serviceKey) || normalise(item.answer).includes(serviceKey)) {
+          score += 16;
+        }
+      }
+
       return { item, score };
     })
     .filter(({ score }) => score > 0)
@@ -494,11 +777,63 @@ export function getChatbotMatches(query: string, limit = 5) {
     .map(({ item }) => item);
 }
 
-export function getChatbotAnswer(query: string) {
-  const match = getChatbotMatches(query, 1)[0];
+export function getChatbotAnswer(query: string, context: ChatbotContext = {}): ChatbotAnswer {
+  const service = findServiceMention(query, context.previousUserQuery);
+  const companyIntent = isGeneralCompanyIntent(query) || isServiceIntent(query);
+  const pricingIntent = isPricingIntent(query);
+  const timelineIntent = isTimelineIntent(query);
+  const supportIntent = isSupportIntent(query);
 
-  if (match) {
-    return match;
+  if (pricingIntent) {
+    const pricingAnswer = buildPricingAnswer(query, service, context.previousUserQuery);
+
+    return {
+      id: service ? `${service.slug}-pricing-answer` : 'pricing-answer',
+      category: 'Pricing',
+      question: service ? `How much does ${service.shortTitle || service.title} cost?` : 'How much does a website cost?',
+      answer: pricingAnswer,
+      matchedQuestion: service ? `How much does ${service.shortTitle || service.title} cost?` : 'How much does a website cost?',
+    };
+  }
+
+  if (timelineIntent && service) {
+    return {
+      ...answerFromServiceQuestion(service, query),
+      matchedQuestion: `How long does ${service.shortTitle || service.title} take?`,
+    };
+  }
+
+  if (supportIntent) {
+    return {
+      id: 'support-answer',
+      category: 'Support',
+      question: 'How do I contact Nexino Technologies Ltd?',
+      answer: buildContactAnswer(),
+      matchedQuestion: 'How do I contact Nexino Technologies Ltd?',
+    };
+  }
+
+  if (companyIntent) {
+    return {
+      id: 'what-nexino-does',
+      category: 'General',
+      question: 'What does Nexino Technologies Ltd do?',
+      answer: companyIntent && /service|services/.test(normalise(query)) ? buildServicesOverviewAnswer() : buildCompanyAnswer(),
+      matchedQuestion: 'What does Nexino Technologies Ltd do?',
+    };
+  }
+
+  if (service) {
+    const answer = answerFromServiceQuestion(service, query);
+    return {
+      ...answer,
+      matchedQuestion: answer.question,
+    };
+  }
+
+  const exactMatch = getChatbotMatches(query, 1)[0];
+  if (exactMatch) {
+    return exactMatch;
   }
 
   return {
@@ -506,6 +841,6 @@ export function getChatbotAnswer(query: string) {
     category: 'General',
     question: query,
     answer:
-      'I could not find an exact match yet. Please try a different wording, or use the contact form and we will help you directly.',
+      'I can help with Nexino services, pricing, timelines, support, contact details and project planning. Try asking about websites, custom systems, AI automation, hosting or data, and I will give a more specific answer.',
   };
 }

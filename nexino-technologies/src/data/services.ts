@@ -1,4 +1,4 @@
-import type { Service } from '@/types/service';
+﻿import type { Service } from '@/types/service';
 
 type ServiceSeed = Pick<
   Service,
@@ -52,7 +52,7 @@ function createService(seed: ServiceSeed): Service {
     faqs: sharedFaqs,
     cta: seed.cta ?? { label: 'Discuss This Service', href: `/contact?service=${seed.slug}` },
     seo: seed.seo ?? {
-      title: `${seed.title} — Nexino Technologies Ltd`,
+      title: `${seed.title} - Nexino Technologies Ltd`,
       description: seed.tagline,
     },
   };
@@ -101,7 +101,7 @@ export const services: Service[] = [
     ],
     cta: { label: 'Discuss This Service', href: '/contact?service=corporate-websites' },
     seo: {
-      title: 'Corporate Website Development — Nexino Technologies Ltd',
+      title: 'Corporate Website Development - Nexino Technologies Ltd',
       description: 'Professional corporate websites built for credibility, performance and lead generation. Responsive, fast and SEO-ready.',
     },
   },
@@ -113,7 +113,7 @@ export const services: Service[] = [
     category: 'Digital Product Development',
     categorySlug: 'digital-product-development',
     tagline: 'Tailored applications built around your specific business logic.',
-    overview: 'We engineer web applications that solve specific operational challenges — from internal tools to customer-facing platforms.',
+    overview: 'We engineer web applications that solve specific operational challenges - from internal tools to customer-facing platforms.',
     heroDescription: 'Off-the-shelf software rarely fits complex business operations. We build custom applications designed around your exact requirements.',
     problems: [
       { title: 'Generic software limitations', description: 'Existing tools do not match your workflow, causing manual workarounds and inefficiency.' },
@@ -147,7 +147,7 @@ export const services: Service[] = [
     ],
     cta: { label: 'Discuss This Service', href: '/contact?service=custom-web-applications' },
     seo: {
-      title: 'Custom Web Application Development — Nexino Technologies Ltd',
+      title: 'Custom Web Application Development - Nexino Technologies Ltd',
       description: 'Tailored web applications engineered for specific business needs. Full-stack development with scalable architecture.',
     },
   },
@@ -194,7 +194,7 @@ export const services: Service[] = [
     ],
     cta: { label: 'Discuss This Service', href: '/contact?service=ai-agents' },
     seo: {
-      title: 'AI Agent Development — Nexino Technologies Ltd',
+      title: 'AI Agent Development - Nexino Technologies Ltd',
       description: 'Custom AI agents that automate tasks, respond intelligently and integrate with your existing systems.',
     },
   },
@@ -206,7 +206,7 @@ export const services: Service[] = [
     category: 'AI and Automation',
     categorySlug: 'ai-and-automation',
     tagline: 'Intelligent conversational interfaces for customers and internal teams.',
-    overview: 'We build chatbots that handle enquiries, guide users and collect information — integrated into your website, platform or communication channels.',
+    overview: 'We build chatbots that handle enquiries, guide users and collect information - integrated into your website, platform or communication channels.',
     heroDescription: 'A well-built chatbot extends your team capacity without adding headcount. We design conversational flows that feel natural and resolve queries effectively.',
     problems: [
       { title: 'Overwhelmed support teams', description: 'High volumes of repetitive enquiries consume team time.' },
@@ -239,7 +239,7 @@ export const services: Service[] = [
     ],
     cta: { label: 'Discuss This Service', href: '/contact?service=business-chatbots' },
     seo: {
-      title: 'Business Chatbot Development — Nexino Technologies Ltd',
+      title: 'Business Chatbot Development - Nexino Technologies Ltd',
       description: 'Intelligent chatbots for websites and platforms that handle enquiries, capture leads and support customers.',
     },
   },
@@ -283,7 +283,7 @@ export const services: Service[] = [
     ],
     cta: { label: 'Discuss This Service', href: '/contact?service=hosting-maintenance' },
     seo: {
-      title: 'Hosting and Website Maintenance — Nexino Technologies Ltd',
+      title: 'Hosting and Website Maintenance - Nexino Technologies Ltd',
       description: 'Managed hosting and monthly maintenance services to keep your digital platforms reliable, updated and monitored.',
     },
   },
@@ -328,7 +328,7 @@ export const services: Service[] = [
     ],
     cta: { label: 'Discuss This Service', href: '/contact?service=data-analytics' },
     seo: {
-      title: 'Data Analytics Services — Nexino Technologies Ltd',
+      title: 'Data Analytics Services - Nexino Technologies Ltd',
       description: 'Data collection, cleaning, analysis and visualisation services to help organisations make better, evidence-based decisions.',
     },
   },
@@ -373,7 +373,7 @@ export const services: Service[] = [
     ],
     cta: { label: 'Discuss This Service', href: '/contact?service=embedded-systems' },
     seo: {
-      title: 'Embedded Systems Development — Nexino Technologies Ltd',
+      title: 'Embedded Systems Development - Nexino Technologies Ltd',
       description: 'Embedded software for microcontrollers, sensors and connected devices. Reliable firmware for industrial and commercial applications.',
     },
   },
@@ -392,7 +392,7 @@ const additionalServices: Service[] = [
     heroDescription: 'Mobile applications should feel fast, simple and useful. We focus on the product flow, the technical foundation and the handoff to deployment.',
     relatedServiceSlugs: ['custom-web-applications', 'ui-ux-design', 'hosting-maintenance'],
     seo: {
-      title: 'Mobile Application Development — Nexino Technologies Ltd',
+      title: 'Mobile Application Development - Nexino Technologies Ltd',
       description: 'Mobile app design and development for customer-facing and internal workflows.',
     },
   }),
@@ -408,7 +408,7 @@ const additionalServices: Service[] = [
     heroDescription: 'E-commerce systems need to feel trustworthy and quick. We focus on clear product journeys, maintainable admin tools and practical integrations.',
     relatedServiceSlugs: ['custom-web-applications', 'hosting-maintenance', 'ui-ux-design'],
     seo: {
-      title: 'E-Commerce Platform Development — Nexino Technologies Ltd',
+      title: 'E-Commerce Platform Development - Nexino Technologies Ltd',
       description: 'E-commerce platforms built for product sales, order handling and business growth.',
     },
   }),
@@ -424,7 +424,7 @@ const additionalServices: Service[] = [
     heroDescription: 'SaaS products succeed when the product logic, architecture and customer experience work together. We design for long-term maintainability.',
     relatedServiceSlugs: ['custom-web-applications', 'hosting-maintenance', 'data-analytics'],
     seo: {
-      title: 'SaaS Product Development — Nexino Technologies Ltd',
+      title: 'SaaS Product Development - Nexino Technologies Ltd',
       description: 'Plan and build SaaS products with scalable architecture and reliable delivery.',
     },
   }),
@@ -440,7 +440,7 @@ const additionalServices: Service[] = [
     heroDescription: 'Good design is not decoration. We use interface design to make products easier to use and easier to build correctly.',
     relatedServiceSlugs: ['custom-web-applications', 'mobile-applications', 'corporate-websites'],
     seo: {
-      title: 'UI/UX Design Services — Nexino Technologies Ltd',
+      title: 'UI/UX Design Services - Nexino Technologies Ltd',
       description: 'Product interface and user experience design for websites, apps and platforms.',
     },
   }),
@@ -456,7 +456,7 @@ const additionalServices: Service[] = [
     heroDescription: 'Messaging automation works best when it is practical and controlled. We focus on real workflows, handoff logic and reliable integrations.',
     relatedServiceSlugs: ['business-chatbots', 'ai-agents', 'customer-support-automation'],
     seo: {
-      title: 'WhatsApp Automation Services — Nexino Technologies Ltd',
+      title: 'WhatsApp Automation Services - Nexino Technologies Ltd',
       description: 'Automate WhatsApp workflows for customer communication, support and follow-up.',
     },
   }),
@@ -472,7 +472,7 @@ const additionalServices: Service[] = [
     heroDescription: 'Automation should remove friction, not create it. We map the process carefully before we connect systems together.',
     relatedServiceSlugs: ['ai-agents', 'business-chatbots', 'hosting-maintenance'],
     seo: {
-      title: 'Workflow Automation Services — Nexino Technologies Ltd',
+      title: 'Workflow Automation Services - Nexino Technologies Ltd',
       description: 'Automate repeatable business processes with clear, dependable workflows.',
     },
   }),
@@ -488,7 +488,7 @@ const additionalServices: Service[] = [
     heroDescription: 'Support automation should feel helpful and calm. We design systems that guide simple cases and escalate complex ones cleanly.',
     relatedServiceSlugs: ['business-chatbots', 'ai-agents', 'whatsapp-automation'],
     seo: {
-      title: 'Customer Support Automation — Nexino Technologies Ltd',
+      title: 'Customer Support Automation - Nexino Technologies Ltd',
       description: 'Automation for support teams that need faster response times and better consistency.',
     },
   }),
@@ -504,7 +504,7 @@ const additionalServices: Service[] = [
     heroDescription: 'Good infrastructure is quiet, reliable and maintainable. We focus on the foundations that let your products keep running well.',
     relatedServiceSlugs: ['hosting-maintenance', 'system-integration', 'custom-web-applications'],
     seo: {
-      title: 'Cloud Infrastructure Services — Nexino Technologies Ltd',
+      title: 'Cloud Infrastructure Services - Nexino Technologies Ltd',
       description: 'Cloud setup and infrastructure support for dependable digital platforms.',
     },
   }),
@@ -520,7 +520,7 @@ const additionalServices: Service[] = [
     heroDescription: 'Integration is often the difference between scattered tools and a usable operating system. We focus on practical connections that hold up in production.',
     relatedServiceSlugs: ['cloud-infrastructure', 'hosting-maintenance', 'custom-web-applications'],
     seo: {
-      title: 'System Integration Services — Nexino Technologies Ltd',
+      title: 'System Integration Services - Nexino Technologies Ltd',
       description: 'Connect software, data sources and operational tools into a cohesive system.',
     },
   }),
@@ -536,7 +536,7 @@ const additionalServices: Service[] = [
     heroDescription: 'Business intelligence should be easy to read and easy to trust. We structure data so your team can actually use it.',
     relatedServiceSlugs: ['data-analytics', 'technical-research', 'cloud-infrastructure'],
     seo: {
-      title: 'Business Intelligence Services — Nexino Technologies Ltd',
+      title: 'Business Intelligence Services - Nexino Technologies Ltd',
       description: 'Dashboards and reporting systems that make data easier to understand and act on.',
     },
   }),
@@ -552,7 +552,7 @@ const additionalServices: Service[] = [
     heroDescription: 'Research is valuable when it answers a practical question. We document findings clearly so decisions are easier to make.',
     relatedServiceSlugs: ['data-analytics', 'business-intelligence', 'custom-web-applications'],
     seo: {
-      title: 'Technical Research Services — Nexino Technologies Ltd',
+      title: 'Technical Research Services - Nexino Technologies Ltd',
       description: 'Research and evaluation support for technology decisions and prototyping.',
     },
   }),
@@ -568,7 +568,7 @@ const additionalServices: Service[] = [
     heroDescription: 'PCB work sits close to the physical product. We approach it with the same focus on clarity, reliability and real-world constraints.',
     relatedServiceSlugs: ['embedded-systems', 'hardware-software-integration', 'intelligent-infrastructure'],
     seo: {
-      title: 'Custom PCB Design — Nexino Technologies Ltd',
+      title: 'Custom PCB Design - Nexino Technologies Ltd',
       description: 'PCB design support for prototypes, sensors and connected hardware products.',
     },
   }),
@@ -584,7 +584,7 @@ const additionalServices: Service[] = [
     heroDescription: 'Integration work is about making the pieces fit reliably. We plan the communication between hardware and software carefully.',
     relatedServiceSlugs: ['embedded-systems', 'pcb-design', 'intelligent-infrastructure'],
     seo: {
-      title: 'Hardware and Software Integration — Nexino Technologies Ltd',
+      title: 'Hardware and Software Integration - Nexino Technologies Ltd',
       description: 'Connect hardware products, firmware and software systems into one working solution.',
     },
   }),
@@ -600,7 +600,7 @@ const additionalServices: Service[] = [
     heroDescription: 'Intelligent infrastructure needs durability and visibility. We focus on systems that can be monitored, maintained and extended.',
     relatedServiceSlugs: ['embedded-systems', 'cloud-infrastructure', 'system-integration'],
     seo: {
-      title: 'Intelligent Infrastructure Services — Nexino Technologies Ltd',
+      title: 'Intelligent Infrastructure Services - Nexino Technologies Ltd',
       description: 'Engineering systems for connected infrastructure, monitoring and data flow.',
     },
   }),
@@ -619,3 +619,4 @@ export function getServicesByCategory(categorySlug: string): Service[] {
 export function getRelatedServices(slugs: string[]): Service[] {
   return allServices.filter((s) => slugs.includes(s.slug));
 }
+

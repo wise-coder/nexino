@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
@@ -160,10 +160,10 @@ export function Header() {
                   'hidden lg:inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full transition-colors',
                   isDarkTheme
                     ? 'bg-white text-nexino-dark hover:bg-nexino-off-white'
-                    : 'bg-black text-white hover:bg-neutral-800',
+                  : 'bg-black text-white hover:bg-neutral-800',
                 )}
               >
-                Start Your Project
+                Start a Project
               </Link>
               <button
                 className={cn(
@@ -180,7 +180,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mega menus — render inside header for hover continuity */}
+        {/* Mega menus - render inside header for hover continuity */}
         {activeMega && (
           <div
             onMouseEnter={() => { if (megaTimeoutRef.current) clearTimeout(megaTimeoutRef.current); }}
@@ -199,3 +199,4 @@ export function Header() {
     </>
   );
 }
+

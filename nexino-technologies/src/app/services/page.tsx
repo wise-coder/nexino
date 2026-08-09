@@ -55,13 +55,12 @@ const serviceCategories = [
   },
   {
     id: 'cloud-infrastructure',
-    title: 'Cloud and Infrastructure',
-    description: 'Reliable hosting, deployment and integration for digital products.',
+    title: 'Cloud, Data and Infrastructure',
+    description: 'Reliable hosting, deployment, integration and data support for digital products.',
     services: [
       { label: 'Hosting and Maintenance', href: '/services/hosting-maintenance' },
       { label: 'Cloud Infrastructure', href: '/services/cloud-infrastructure' },
       { label: 'System Integration', href: '/services/system-integration' },
-      { label: 'Performance Monitoring', href: '/services/hosting-maintenance' },
     ],
     highlight: 'bg-nexino-blue/5 border-nexino-blue/20',
     linkHoverClass: 'group-hover:text-nexino-blue',
@@ -77,7 +76,6 @@ const serviceCategories = [
     services: [
       { label: 'Data Analytics', href: '/services/data-analytics' },
       { label: 'Business Intelligence', href: '/services/business-intelligence' },
-      { label: 'Data Visualisation', href: '/services/data-analytics' },
       { label: 'Technical Research', href: '/services/technical-research' },
     ],
     highlight: 'bg-nexino-green/5 border-nexino-green/20',
@@ -286,7 +284,7 @@ export default function ServicesPage() {
       <CTASection
         title="Ready to start a project?"
         description="Tell us what you are building or improving and we will help identify the right approach."
-        primaryCta={{ label: 'Discuss Your Project', href: '/contact?type=project' }}
+        primaryCta={{ label: 'Start a Project', href: '/contact?type=project' }}
         secondaryCta={{ label: 'Request a Consultation', href: '/contact' }}
       />
     </>

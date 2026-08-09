@@ -1,4 +1,4 @@
-import type { Project } from '@/types/project';
+﻿import type { Project } from '@/types/project';
 
 export const projects: Project[] = [
   {
@@ -23,7 +23,7 @@ export const projects: Project[] = [
       { step: 1, title: 'Research', description: 'Reviewed existing chatbot architectures and intent classification approaches.' },
       { step: 2, title: 'Prototype design', description: 'Defined the conversation flow and escalation rules.' },
       { step: 3, title: 'Build', description: 'Developed the prototype using a combination of rule-based and AI-assisted classification.' },
-      { step: 4, title: 'Testing', description: 'Evaluated performance across a set of sample queries.' },
+      { step: 4, title: 'Testing', description: 'Evaluated performance across a set of representative queries.' },
     ],
     technologies: [
       { name: 'Python', category: 'Language' },
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     disclaimer: 'This item is presented as a prototype and does not represent a completed client engagement.',
     relatedProjectSlugs: ['business-operations-dashboard'],
     seo: {
-      title: 'Intelligent Customer Support Assistant — Nexino Technologies Ltd',
+      title: 'Intelligent Customer Support Assistant - Nexino Technologies Ltd',
       description: 'An AI prototype for handling customer enquiries automatically with escalation to human support.',
     },
     accentColor: '#0094E8',
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     disclaimer: 'This item is presented as a concept and does not represent a completed client engagement.',
     relatedProjectSlugs: ['intelligent-support-assistant', 'connected-monitoring-system'],
     seo: {
-      title: 'Business Operations Dashboard — Nexino Technologies Ltd',
+      title: 'Business Operations Dashboard - Nexino Technologies Ltd',
       description: 'A concept for a real-time business operations dashboard with multi-source data aggregation and automated reporting.',
     },
     accentColor: '#12C878',
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     disclaimer: 'This item is presented as a research prototype and does not represent a completed client engagement.',
     relatedProjectSlugs: ['business-operations-dashboard'],
     seo: {
-      title: 'Connected Monitoring System — Nexino Technologies Ltd',
+      title: 'Connected Monitoring System - Nexino Technologies Ltd',
       description: 'A research prototype for IoT environmental monitoring with cloud connectivity and real-time dashboards.',
     },
     accentColor: '#0094E8',
@@ -138,3 +138,4 @@ export function getProjectsByCategory(category: string): Project[] {
 export function getRelatedProjects(slugs: string[]): Project[] {
   return projects.filter((p) => slugs.includes(p.slug));
 }
+

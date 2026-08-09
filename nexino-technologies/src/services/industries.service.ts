@@ -1,5 +1,5 @@
-/**
- * Industries service — prepares for NestJS endpoints:
+﻿/**
+ * Industries service - prepares for NestJS endpoints:
  * GET /api/industries
  * GET /api/industries/:slug
  */
@@ -21,3 +21,4 @@ export async function fetchIndustryBySlug(slug: string): Promise<Industry | unde
   }
   return getIndustryBySlug(slug);
 }
+

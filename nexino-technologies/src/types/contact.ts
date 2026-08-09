@@ -1,4 +1,4 @@
-export type ContactService =
+﻿export type ContactService =
   | 'Digital Product Development'
   | 'AI and Business Automation'
   | 'Cloud and Infrastructure'
@@ -18,8 +18,8 @@ export type ContactProjectType =
 export type ContactBudget =
   | 'Not decided'
   | 'Below 500,000 RWF'
-  | '500,000–1,000,000 RWF'
-  | '1,000,000–3,000,000 RWF'
+  | '500,000-1,000,000 RWF'
+  | '1,000,000-3,000,000 RWF'
   | 'Above 3,000,000 RWF'
   | 'Prefer to discuss';
 
@@ -53,3 +53,4 @@ export interface InquiryResponse {
   message: string;
   id?: string;
 }
+

@@ -257,10 +257,10 @@ export default function WorkPage() {
       </section>
 
       <CTASection
-        label="Start a project"
+        label="Start a Project"
         title="Have something you want to build?"
         description="Tell us what you are working on and we will help identify the right approach."
-        primaryCta={{ label: 'Discuss a Similar Solution', href: '/contact?type=project' }}
+        primaryCta={{ label: 'Start a Project', href: '/contact?type=project' }}
         secondaryCta={{ label: 'View Services', href: '/services' }}
       />
     </>

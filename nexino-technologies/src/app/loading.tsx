@@ -1,4 +1,4 @@
-import { BrandLogo } from '@/components/shared/BrandLogo';
+﻿import { BrandLogo } from '@/components/shared/BrandLogo';
 
 export default function Loading() {
   return (
@@ -12,7 +12,8 @@ export default function Loading() {
       {/* Spinner ring */}
       <div className="w-8 h-8 border-2 border-nexino-border border-t-nexino-blue rounded-full animate-spin" />
 
-      <p className="text-nexino-text-secondary text-sm sr-only">Loading…</p>
+      <p className="text-nexino-text-secondary text-sm sr-only">Loading...</p>
     </div>
   );
 }
+

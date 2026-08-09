@@ -14,7 +14,7 @@ const homeServices = [
     slug: 'corporate-websites',
     description: 'For organisations that need a clear, credible and mobile-friendly presence that supports trust and communication.',
     capabilities: [
-      'Professional company presentation',
+      'Professional organisation presentation',
       'Mobile-friendly experience',
       'Clear service information',
       'Contact and inquiry forms',
@@ -24,7 +24,7 @@ const homeServices = [
     accentColor: '#111111',
     image: '/images/new/responsive-devices.jpg',
     alt: 'Responsive website displayed across desktop, tablet and mobile devices',
-    cta: 'Request a Proposal',
+    cta: 'Request a Website Quote',
   },
   {
     number: '02',
@@ -42,7 +42,7 @@ const homeServices = [
     accentColor: '#111111',
     image: '/images/new/laptop-code.jpg',
     alt: 'Developer working on a laptop with code visible on screen',
-    cta: 'Discuss My System',
+    cta: 'Discuss a Custom System',
   },
   {
     number: '03',
@@ -96,7 +96,7 @@ const homeServices = [
     accentColor: '#111111',
     image: '/images/new/phone-business.jpg',
     alt: 'Business smartphone concept used for professional communication',
-    cta: 'Book a Consultation',
+    cta: 'Request a Consultation',
     href: '/contact?type=project',
   },
 ];

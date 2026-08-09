@@ -33,7 +33,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
   const menuItems = [
     { label: 'Home', href: '/' },
-    { label: 'Company', href: '/about' },
+    { label: 'About', href: '/about' },
     { label: 'Our Work', href: '/work' },
     { label: 'Contact', href: '/contact' },
   ];
@@ -208,7 +208,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   isDarkTheme ? 'bg-white text-nexino-dark hover:bg-nexino-off-white' : 'bg-black text-white hover:bg-neutral-800',
                 )}
               >
-                Start Your Project
+                Start a Project
               </Link>
               <div className="space-y-2">
                 <a

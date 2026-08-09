@@ -36,7 +36,7 @@ export function SelectedWorkSection() {
               href="/work"
               className="shrink-0 inline-flex items-center gap-2 font-semibold text-nexino-blue hover:gap-3 transition-all"
             >
-              Build a Similar Solution
+              View Project Details
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
           </AnimatedSection>

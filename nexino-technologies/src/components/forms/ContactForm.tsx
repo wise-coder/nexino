@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 import { submitInquiry } from '@/services/contact.service';
 import type { ContactService } from '@/types/contact';
 
-// ─── Zod schema ──────────────────────────────────────────────────────────────
+// â”€â”€â”€ Zod schema â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const schema = z.object({
   fullName: z.string().min(2, 'Please enter your full name.'),
   email: z.string().email('Please enter a valid email address.'),
@@ -39,8 +39,8 @@ const schema = z.object({
   estimatedBudget: z.enum([
     'Not decided',
     'Below 500,000 RWF',
-    '500,000–1,000,000 RWF',
-    '1,000,000–3,000,000 RWF',
+    '500,000-1,000,000 RWF',
+    '1,000,000-3,000,000 RWF',
     'Above 3,000,000 RWF',
     'Prefer to discuss',
   ] as const),
@@ -51,7 +51,7 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>;
 
-// ─── Field components ─────────────────────────────────────────────────────────
+// â”€â”€â”€ Field components â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function Label({ htmlFor, children, required }: { htmlFor: string; children: React.ReactNode; required?: boolean }) {
   return (
     <label htmlFor={htmlFor} className="block text-sm font-semibold text-nexino-text mb-1.5">
@@ -80,7 +80,7 @@ function inputClass(hasError: boolean) {
   );
 }
 
-// ─── Main form ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Main form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export function ContactForm() {
   const searchParams = useSearchParams();
   const [submitState, setSubmitState] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -204,7 +204,7 @@ export function ContactForm() {
         </div>
       )}
 
-      {/* Section 1 — About you */}
+      {/* Section 1 - About you */}
       <fieldset className="space-y-5">
         <legend className="text-lg font-bold text-nexino-text border-b border-nexino-border pb-3 w-full">
           About your organisation
@@ -268,7 +268,7 @@ export function ContactForm() {
         </div>
       </fieldset>
 
-      {/* Section 2 — Your project */}
+      {/* Section 2 - Your project */}
       <fieldset className="space-y-5">
         <legend className="text-lg font-bold text-nexino-text border-b border-nexino-border pb-3 w-full">
           About your project
@@ -341,8 +341,8 @@ export function ContactForm() {
             >
               <option value="Not decided">Not decided yet</option>
               <option value="Below 500,000 RWF">Below 500,000 RWF</option>
-              <option value="500,000–1,000,000 RWF">500,000–1,000,000 RWF</option>
-              <option value="1,000,000–3,000,000 RWF">1,000,000–3,000,000 RWF</option>
+              <option value="500,000-1,000,000 RWF">500,000-1,000,000 RWF</option>
+              <option value="1,000,000-3,000,000 RWF">1,000,000-3,000,000 RWF</option>
               <option value="Above 3,000,000 RWF">Above 3,000,000 RWF</option>
               <option value="Prefer to discuss">Prefer to discuss</option>
             </select>
@@ -377,7 +377,7 @@ export function ContactForm() {
         </div>
       </fieldset>
 
-      {/* Section 3 — Preferences */}
+      {/* Section 3 - Preferences */}
       <fieldset className="space-y-5">
         <legend className="text-lg font-bold text-nexino-text border-b border-nexino-border pb-3 w-full">
           Contact preferences
@@ -446,7 +446,7 @@ export function ContactForm() {
         {(isSubmitting || submitState === 'loading') ? (
           <>
             <Loader2 className="w-4 h-4 animate-spin" aria-hidden="true" />
-            Submitting…
+            Submitting...
           </>
         ) : (
           'Send Project Inquiry'
@@ -455,3 +455,4 @@ export function ContactForm() {
     </form>
   );
 }
+

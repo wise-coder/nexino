@@ -58,7 +58,7 @@ export function MegaMenu({ type, isOpen, onClose }: MegaMenuProps) {
                 onClick={onClose}
                 className="shrink-0 inline-flex items-center gap-2 bg-black text-white text-sm font-semibold px-5 py-3 rounded-full hover:bg-neutral-800 transition-colors whitespace-nowrap"
               >
-                Discuss Your Project
+                Start a Project
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
             </div>

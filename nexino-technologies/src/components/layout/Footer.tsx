@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 import { Container } from '@/components/shared/Container';
 import { BrandLogo } from '@/components/shared/BrandLogo';
@@ -13,17 +13,17 @@ const footerLinks = {
     { label: 'Contact', href: '/contact' },
   ],
   services: [
-    { label: 'Digital Products', href: '/services/custom-web-applications' },
+    { label: 'Websites and Web Applications', href: '/services/custom-web-applications' },
     { label: 'AI and Automation', href: '/services/ai-agents' },
     { label: 'Cloud and Infrastructure', href: '/services/hosting-maintenance' },
     { label: 'Data and Research', href: '/services/data-analytics' },
     { label: 'Intelligent Systems', href: '/services/embedded-systems' },
   ],
   industries: [
-    { label: 'Business', href: '/industries/business-technologies' },
-    { label: 'Mining', href: '/industries/mining-technologies' },
-    { label: 'Construction', href: '/industries/construction-technologies' },
-    { label: 'Health', href: '/industries/health-technologies' },
+    { label: 'Business Technologies', href: '/industries/business-technologies' },
+    { label: 'Mining Technologies', href: '/industries/mining-technologies' },
+    { label: 'Construction Technologies', href: '/industries/construction-technologies' },
+    { label: 'Health Technologies', href: '/industries/health-technologies' },
     { label: 'Intelligent Infrastructure', href: '/industries/intelligent-infrastructure' },
   ],
 };
@@ -84,7 +84,7 @@ export function Footer() {
           {/* Company links */}
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.12em] text-white/40 mb-5">
-              Company
+              Explore
             </p>
             <ul className="space-y-3" role="list">
               {footerLinks.company.map((link) => (
@@ -144,7 +144,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <Container className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white/40">
-            © {year} Nexino Technologies Ltd. All rights reserved.
+            Copyright {year} Nexino Technologies Ltd. All rights reserved.
           </p>
           <p className="text-xs text-white/40 font-medium tracking-wide">
             Plan. Build. Support.
@@ -162,3 +162,4 @@ export function Footer() {
     </footer>
   );
 }
+

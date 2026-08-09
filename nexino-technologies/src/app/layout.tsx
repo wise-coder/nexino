@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
@@ -19,11 +19,11 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.nexinotechnologies.com'),
   title: {
-    default: 'Nexino Technologies Ltd — Smart Solutions. Real Impact.',
-    template: '%s — Nexino Technologies Ltd',
+    default: 'Nexino Technologies Ltd - Websites, Business Systems & Digital Solutions',
+    template: '%s - Nexino Technologies Ltd',
   },
   description:
-    'Nexino Technologies Ltd combines software engineering, AI, data, cloud infrastructure and embedded systems to solve practical business challenges.',
+    'Nexino Technologies Ltd designs, builds and supports websites, business systems, AI tools, automation, cloud services and embedded solutions for organisations.',
   keywords: ['software development', 'AI automation', 'cloud infrastructure', 'data analytics', 'embedded systems', 'Rwanda', 'Kigali'],
   authors: [{ name: 'Nexino Technologies Ltd' }],
   creator: 'Nexino Technologies Ltd',
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.nexinotechnologies.com',
     siteName: 'Nexino Technologies Ltd',
-    title: 'Nexino Technologies Ltd — Smart Solutions. Real Impact.',
+    title: 'Nexino Technologies Ltd - Websites, Business Systems & Digital Solutions',
     description:
-      'Engineering intelligent solutions for a changing world. Software, AI, cloud and embedded systems.',
+      'Practical technology services for websites, business systems, automation, cloud infrastructure and embedded solutions.',
     images: [
       {
         url: '/og-image.png',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nexino Technologies Ltd — Smart Solutions. Real Impact.',
+    title: 'Nexino Technologies Ltd - Smart Solutions. Real Impact.',
     description: 'Engineering intelligent solutions for a changing world.',
     images: ['/og-image.png'],
   },
@@ -83,3 +83,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+

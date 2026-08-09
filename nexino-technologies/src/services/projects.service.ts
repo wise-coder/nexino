@@ -1,5 +1,5 @@
-/**
- * Projects service — prepares for NestJS endpoints:
+﻿/**
+ * Projects service - prepares for NestJS endpoints:
  * GET /api/projects
  * GET /api/projects/:slug
  */
@@ -21,3 +21,4 @@ export async function fetchProjectBySlug(slug: string): Promise<Project | undefi
   }
   return getProjectBySlug(slug);
 }
+

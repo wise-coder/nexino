@@ -220,7 +220,7 @@ export default async function IndustryDetailPage({ params }: Props) {
         <Container>
           <AnimatedSection className="mb-12">
             <p className="text-nexino-green text-xs font-bold uppercase tracking-[0.15em] mb-4">
-              Example architecture
+              Illustrative architecture
             </p>
             <h2 id="architecture-heading" className="text-3xl sm:text-4xl font-bold text-white">
               How a system might be structured.

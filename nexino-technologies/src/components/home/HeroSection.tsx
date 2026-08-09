@@ -87,7 +87,7 @@ export function HeroSection() {
                 href="/contact?type=project"
                 className="inline-flex items-center gap-2 rounded-full bg-black px-7 py-4 font-semibold text-white shadow-lg shadow-black/20 transition-colors hover:bg-neutral-800"
               >
-                Start Your Project
+                Start a Project
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
               <Link

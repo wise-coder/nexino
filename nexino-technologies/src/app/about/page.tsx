@@ -271,7 +271,7 @@ export default function AboutPage() {
       <CTASection
         title="Ready to work with us?"
         description="Tell us about your project and we will help shape the right approach."
-        primaryCta={{ label: 'Discuss Your Project', href: '/contact?type=project' }}
+        primaryCta={{ label: 'Start a Project', href: '/contact?type=project' }}
         secondaryCta={{ label: 'View Services', href: '/services' }}
       />
     </>

@@ -189,11 +189,11 @@ export default function ContactPage() {
                   <div className="flex items-center gap-2 mb-2">
                     <Clock className="w-4 h-4 text-nexino-text-secondary" aria-hidden="true" />
                     <p className="text-xs font-bold uppercase tracking-wide text-nexino-text-secondary">
-                      Business hours
+                      Response time
                     </p>
                   </div>
                   <p className="text-sm text-nexino-text-secondary italic">
-                    Business hours will be added once confirmed.
+                    We aim to respond within one business day.
                   </p>
                 </div>
               </AnimatedSection>

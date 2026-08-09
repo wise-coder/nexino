@@ -1,4 +1,4 @@
-import { Container } from '@/components/shared/Container';
+﻿import { Container } from '@/components/shared/Container';
 import { technologies } from '@/data/technologies';
 import { AnimatedSection } from '@/components/motion/AnimatedSection';
 
@@ -40,7 +40,7 @@ export function TechnologyMarqueeSection() {
       <ul className="sr-only">
         {technologies.map((tech) => (
           <li key={tech.name}>
-            {tech.name} — {tech.category}
+            {tech.name} - {tech.category}
           </li>
         ))}
       </ul>
@@ -51,3 +51,4 @@ export function TechnologyMarqueeSection() {
     </section>
   );
 }
+

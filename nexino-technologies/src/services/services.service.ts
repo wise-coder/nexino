@@ -1,5 +1,5 @@
-/**
- * Services service — prepares for NestJS endpoints:
+﻿/**
+ * Services service - prepares for NestJS endpoints:
  * GET /api/services
  * GET /api/services/:slug
  */
@@ -21,3 +21,4 @@ export async function fetchServiceBySlug(slug: string): Promise<Service | undefi
   }
   return getServiceBySlug(slug);
 }
+

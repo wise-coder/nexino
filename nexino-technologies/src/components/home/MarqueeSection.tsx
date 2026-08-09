@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { marqueeCapabilities } from '@/data/technologies';
 
@@ -17,7 +17,7 @@ function MarqueeTrack({ items }: { items: string[] }) {
         >
           {item}
           <span className="mx-6 text-nexino-blue" style={{ WebkitTextStroke: 0, color: '#0094E8' }}>
-            •
+            |
           </span>
         </span>
       ))}
@@ -42,3 +42,4 @@ export function MarqueeSection() {
     </section>
   );
 }
+

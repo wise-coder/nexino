@@ -58,8 +58,8 @@ export default function WorkPage() {
             <AnimatedSection delay={0.1} direction="left">
               <div className="relative overflow-hidden rounded-[32px] border border-white/10 shadow-2xl shadow-black/20 aspect-[4/3]">
                 <Image
-                  src="/images/home/ai-technology-icons.png"
-                  alt="Abstract artificial intelligence and digital technology icons"
+                  src="/images/new/desktop-devices.jpg"
+                  alt="Website displayed across desktop, tablet and mobile devices"
                   fill
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105"

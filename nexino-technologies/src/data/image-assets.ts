@@ -5,152 +5,152 @@ export type ImageAsset = {
 
 export const pageHeroImages = {
   home: {
-    src: '/images/about/about-hero-team.jpg',
-    alt: 'Technology team collaborating around laptops in a modern office',
+    src: '/images/new/team-coding-top-view.jpg',
+    alt: 'Team members collaborating around a laptop in an overhead coding session',
   },
   about: {
-    src: '/images/about/about-hero-team.jpg',
-    alt: 'Technology team collaborating around laptops in a modern office',
+    src: '/images/new/software-developer-desk.jpg',
+    alt: 'Developer working at a desk with a laptop and technical setup',
   },
   services: {
-    src: '/images/services/corporate-websites.jpg',
-    alt: 'Team planning a digital product and website strategy around a laptop',
+    src: '/images/new/desktop-devices.jpg',
+    alt: 'Website displayed across desktop, tablet and mobile devices',
   },
   industries: {
-    src: '/images/industries/intelligent-infrastructure.jpg',
-    alt: 'Connected infrastructure and smart technology systems in a city environment',
+    src: '/images/new/industrial-network.jpg',
+    alt: 'Industrial networking technology illustration with connected systems',
   },
   work: {
-    src: '/images/work/operations-dashboard.jpg',
-    alt: 'Analytics dashboard displayed on a laptop in a working session',
+    src: '/images/new/laptop-code.jpg',
+    alt: 'Developer working on a laptop with code visible on screen',
   },
   contact: {
-    src: '/images/contact/contact-hero.jpg',
-    alt: 'Support team members working on laptops in a collaborative office',
+    src: '/images/new/social-communication.jpg',
+    alt: 'Digital communication and social connection concept image',
   },
 } satisfies Record<string, ImageAsset>;
 
 export const serviceImages = {
   'corporate-websites': {
-    src: '/images/services/corporate-websites.jpg',
-    alt: 'Team planning a corporate website and digital strategy around a laptop',
+    src: '/images/new/desktop-devices.jpg',
+    alt: 'Website displayed across desktop, tablet and mobile devices',
   },
   'custom-web-applications': {
-    src: '/images/services/custom-web-applications.jpg',
+    src: '/images/new/laptop-code.jpg',
     alt: 'Developer typing code on a laptop in a modern office setting',
   },
   'ai-agents': {
-    src: '/images/services/ai-agents.png',
-    alt: 'Abstract artificial intelligence illustration with glowing digital elements',
+    src: '/images/new/ai-robot-hand.jpg',
+    alt: 'Futuristic AI robot hand illustration on a dark background',
   },
   'business-chatbots': {
-    src: '/images/services/business-chatbots.jpg',
-    alt: 'Smartphone chat interface used for digital support and automation',
+    src: '/images/new/smartphone-icons.jpg',
+    alt: 'Smartphone interface with communication and automation icons',
   },
   'hosting-maintenance': {
-    src: '/images/services/hosting-infrastructure.jpg',
-    alt: 'Modern infrastructure and office building representing reliable hosting',
+    src: '/images/new/monitor-desk.jpg',
+    alt: 'Modern workstation with multiple monitors in a technical workspace',
   },
   'data-analytics': {
-    src: '/images/services/data-analytics.jpg',
-    alt: 'Analytics dashboard displayed on a tablet for data review',
+    src: '/images/new/laptop-coffee.jpg',
+    alt: 'Modern laptop workspace with coffee and plants on a wooden table',
   },
   'embedded-systems': {
-    src: '/images/services/embedded-systems.jpg',
-    alt: 'Microchip and embedded electronics representing connected hardware',
+    src: '/images/new/industrial-network.jpg',
+    alt: 'Industrial networking technology illustration with connected systems',
   },
   'mobile-applications': {
-    src: '/images/services/mobile-applications.jpg',
-    alt: 'A smartphone displaying a mobile app interface on screen',
+    src: '/images/new/phone-business.jpg',
+    alt: 'Business smartphone concept used for professional communication',
   },
   'ecommerce-platforms': {
-    src: '/images/services/ecommerce-platforms.jpg',
-    alt: 'An online shopping and checkout interface on a laptop screen',
+    src: '/images/new/responsive-devices.jpg',
+    alt: 'Responsive website displayed across desktop, tablet and mobile devices',
   },
   'saas-development': {
-    src: '/images/services/saas-development.jpg',
-    alt: 'A laptop showing a SaaS dashboard with charts and product metrics',
+    src: '/images/new/software-developer-desk.jpg',
+    alt: 'Developer working at a desk with a laptop and technical setup',
   },
   'ui-ux-design': {
-    src: '/images/services/ui-ux-design.jpg',
-    alt: 'Wireframes and interface sketches for a product design workflow',
+    src: '/images/new/team-coding-top-view.jpg',
+    alt: 'Team members collaborating around a laptop in an overhead coding session',
   },
   'whatsapp-automation': {
-    src: '/images/services/whatsapp-automation.jpg',
-    alt: 'A smartphone used for messaging automation and customer communication',
+    src: '/images/new/social-communication.jpg',
+    alt: 'Digital communication and social connection concept image',
   },
   'workflow-automation': {
-    src: '/images/services/workflow-automation.jpg',
-    alt: 'People reviewing automated workflow and analytics dashboards',
+    src: '/images/new/woman-social-phone.jpg',
+    alt: 'Professional using a smartphone for connected digital work',
   },
   'customer-support-automation': {
-    src: '/images/services/customer-support-automation.jpg',
-    alt: 'Customer support agents in a call center using headsets and computers',
+    src: '/images/new/phone-business.jpg',
+    alt: 'Business smartphone concept used for professional communication',
   },
   'cloud-infrastructure': {
-    src: '/images/services/cloud-infrastructure.jpg',
-    alt: 'Blue-lit server racks in a modern data center',
+    src: '/images/new/cloud-network.jpg',
+    alt: 'Cloud computing network illustration with connected digital nodes',
   },
   'system-integration': {
-    src: '/images/services/system-integration.jpg',
-    alt: 'Network and server infrastructure connected with data cables',
+    src: '/images/new/monitor-desk.jpg',
+    alt: 'Modern workstation with multiple monitors in a technical workspace',
   },
   'business-intelligence': {
-    src: '/images/services/business-intelligence.jpg',
-    alt: 'Business intelligence dashboard with charts and data insights',
+    src: '/images/new/desktop-devices.jpg',
+    alt: 'Website displayed across desktop, tablet and mobile devices',
   },
   'technical-research': {
-    src: '/images/services/technical-research.jpg',
-    alt: 'A researcher examining technical information in a lab setting',
+    src: '/images/new/laptop-code.jpg',
+    alt: 'Developer typing code on a laptop in a modern office setting',
   },
   'pcb-design': {
-    src: '/images/services/pcb-design.jpg',
-    alt: 'A printed circuit board with chips and electronic components',
+    src: '/images/new/software-developer-desk.jpg',
+    alt: 'Developer working at a desk with a laptop and technical setup',
   },
   'hardware-software-integration': {
-    src: '/images/services/hardware-software-integration.jpg',
-    alt: 'Electronic hardware components and connectors on a circuit board',
+    src: '/images/new/industrial-network.jpg',
+    alt: 'Industrial networking technology illustration with connected systems',
   },
   'intelligent-infrastructure': {
-    src: '/images/services/intelligent-infrastructure.jpg',
-    alt: 'Connected infrastructure hardware and cabling in a technical setting',
+    src: '/images/new/cloud-network.jpg',
+    alt: 'Cloud computing network illustration with connected digital nodes',
   },
 } satisfies Record<string, ImageAsset>;
 
 export const industryImages = {
   'business-technologies': {
-    src: '/images/industries/business-technologies.jpg',
-    alt: 'Business team collaborating around laptops in an office setting',
+    src: '/images/new/team-coding-top-view.jpg',
+    alt: 'Team members collaborating around a laptop in an overhead coding session',
   },
   'mining-technologies': {
-    src: '/images/industries/mining-technologies.jpg',
-    alt: 'Aerial view of an active mining site and earth-moving equipment',
+    src: '/images/new/industrial-network.jpg',
+    alt: 'Industrial networking technology illustration with connected systems',
   },
   'construction-technologies': {
-    src: '/images/industries/construction-technologies.jpg',
-    alt: 'Construction professional reviewing site information on a tablet',
+    src: '/images/new/laptop-coffee.jpg',
+    alt: 'Modern laptop workspace with coffee and plants on a wooden table',
   },
   'health-technologies': {
-    src: '/images/industries/health-technologies.jpg',
-    alt: 'Healthcare professionals reviewing information on a computer screen',
+    src: '/images/new/social-communication.jpg',
+    alt: 'Digital communication and social connection concept image',
   },
   'intelligent-infrastructure': {
-    src: '/images/industries/intelligent-infrastructure.jpg',
-    alt: 'Smart infrastructure and connected systems in a modern environment',
+    src: '/images/new/cloud-network.jpg',
+    alt: 'Cloud computing network illustration with connected digital nodes',
   },
 } satisfies Record<string, ImageAsset>;
 
 export const projectImages = {
   'intelligent-support-assistant': {
-    src: '/images/work/support-assistant.jpg',
-    alt: 'Smartphone chat interface representing an intelligent support assistant',
+    src: '/images/new/phone-business.jpg',
+    alt: 'Business smartphone concept used for professional communication',
   },
   'business-operations-dashboard': {
-    src: '/images/work/operations-dashboard.jpg',
-    alt: 'Analytics dashboard interface shown on a laptop screen',
+    src: '/images/new/desktop-devices.jpg',
+    alt: 'Website displayed across desktop, tablet and mobile devices',
   },
   'connected-monitoring-system': {
-    src: '/images/work/connected-monitoring.jpg',
-    alt: 'Connected smart monitoring and infrastructure systems',
+    src: '/images/new/cloud-network.jpg',
+    alt: 'Cloud computing network illustration with connected digital nodes',
   },
 } satisfies Record<string, ImageAsset>;

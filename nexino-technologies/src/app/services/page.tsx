@@ -138,8 +138,8 @@ export default function ServicesPage() {
             <AnimatedSection delay={0.1} direction="left">
               <div className="relative overflow-hidden rounded-[32px] border border-nexino-border shadow-2xl shadow-nexino-dark/10 aspect-[4/3]">
                 <Image
-                  src="/images/home/software-collaboration-team.jpg"
-                  alt="Team collaborating around a laptop in a modern office"
+                  src="/images/new/desktop-devices.jpg"
+                  alt="Website displayed across desktop, tablet and mobile devices"
                   fill
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105"
@@ -232,8 +232,8 @@ export default function ServicesPage() {
               />
               <div className="mt-8 relative overflow-hidden rounded-[28px] border border-nexino-border aspect-[4/5]">
                 <Image
-                  src="/images/home/data-center-server-rack.jpg"
-                  alt="Blue-lit server racks in a modern data center"
+                  src="/images/new/cloud-network.jpg"
+                  alt="Cloud computing network illustration with connected digital nodes"
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 40vw"

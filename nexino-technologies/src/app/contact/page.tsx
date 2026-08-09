@@ -87,8 +87,8 @@ export default function ContactPage() {
             <AnimatedSection delay={0.1} direction="left">
               <div className="relative overflow-hidden rounded-[32px] border border-white/10 shadow-2xl shadow-black/20 aspect-[4/3]">
                 <Image
-                  src="/images/contact/contact-hero.jpg"
-                  alt="Support team members working on laptops in a collaborative office"
+                  src="/images/new/social-communication.jpg"
+                  alt="Digital communication and social connection concept image"
                   fill
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105"

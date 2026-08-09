@@ -31,6 +31,11 @@ const solutions: SolutionItem[] = [
     href: '/services/ecommerce-platforms',
     visual: 'bg-nexino-off-white',
     reverse: false,
+    image: {
+      src: '/images/new/desktop-devices.jpg',
+      alt: 'Website displayed across desktop, tablet and mobile devices',
+      label: 'Digital commerce and web platforms',
+    },
   },
   {
     number: '02',
@@ -68,6 +73,11 @@ const solutions: SolutionItem[] = [
     href: '/services/data-analytics',
     visual: 'bg-nexino-off-white',
     reverse: true,
+    image: {
+      src: '/images/new/software-developer-desk.jpg',
+      alt: 'Developer working at a desk with a laptop and technical setup',
+      label: 'Research and analysis',
+    },
   },
 ];
 

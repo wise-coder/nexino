@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Container } from '@/components/shared/Container';
@@ -129,6 +130,21 @@ export function WhyNexinoSection() {
                       </p>
                       <h3 className="text-2xl font-bold text-white">{reason.title}</h3>
                       <p className="text-white/70 leading-relaxed text-lg">{reason.description}</p>
+                      <div className="relative overflow-hidden rounded-2xl border border-white/10 aspect-[16/9]">
+                        <Image
+                          src="/images/new/software-developer-desk.jpg"
+                          alt="Developer working at a desk with a laptop and technical setup"
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 1024px) 100vw, 40vw"
+                        />
+                        <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
+                        <div className="absolute inset-0 flex items-end p-4">
+                          <p className="text-white text-sm font-semibold">
+                            Practical delivery with clear communication
+                          </p>
+                        </div>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>

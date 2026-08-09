@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Container } from '@/components/shared/Container';
 import { AnimatedSection } from '@/components/motion/AnimatedSection';
 
@@ -14,15 +15,33 @@ export function ProcessSection() {
   return (
     <section className="py-20 lg:py-28 bg-white" aria-labelledby="process-heading">
       <Container>
-        <AnimatedSection className="mb-16">
-          <p className="text-xs font-bold uppercase tracking-[0.15em] text-nexino-blue mb-3">
-            Our Process
-          </p>
-          <h2 id="process-heading" className="text-4xl sm:text-5xl font-bold text-nexino-text leading-tight">
-            From challenge to<br />
-            <span className="font-semibold text-nexino-text">working solution.</span>
-          </h2>
-        </AnimatedSection>
+        <div className="grid lg:grid-cols-[1fr_0.8fr] gap-10 lg:gap-14 items-end mb-16">
+          <AnimatedSection>
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-nexino-blue mb-3">
+              Our Process
+            </p>
+            <h2 id="process-heading" className="text-4xl sm:text-5xl font-bold text-nexino-text leading-tight">
+              From challenge to<br />
+              <span className="font-semibold text-nexino-text">working solution.</span>
+            </h2>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.1} direction="left">
+            <div className="relative overflow-hidden rounded-[28px] border border-nexino-border shadow-xl shadow-nexino-dark/5 aspect-[16/10]">
+              <Image
+                src="/images/new/monitor-desk.jpg"
+                alt="Modern workstation with multiple monitors in a technical workspace"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+              <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
+              <div className="absolute inset-0 p-5 flex items-end">
+                <p className="text-white font-semibold">Clear steps from discovery to support</p>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
 
         {/* Desktop timeline */}
         <div className="hidden lg:block">

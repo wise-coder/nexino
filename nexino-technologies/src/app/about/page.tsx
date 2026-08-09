@@ -60,8 +60,8 @@ export default function AboutPage() {
             <AnimatedSection delay={0.1} direction="left">
               <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-2xl shadow-black/20 aspect-[4/5]">
                 <Image
-                  src="/images/about/about-hero-team.jpg"
-                  alt="Technology team collaborating around laptops in a modern office"
+                  src="/images/new/software-developer-desk.jpg"
+                  alt="Developer working at a desk with a laptop and technical setup"
                   fill
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105"
@@ -112,9 +112,9 @@ export default function AboutPage() {
                 </p>
 
                 <div className="relative overflow-hidden rounded-2xl border border-nexino-border bg-nexino-off-white shadow-lg shadow-nexino-dark/5 aspect-[16/10]">
-                  <Image
-                    src="/images/about/about-office-building.jpg"
-                    alt="Modern office building representing the company's operational base"
+                <Image
+                    src="/images/new/laptop-coffee.jpg"
+                    alt="Modern laptop workspace with coffee and plants on a wooden table"
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 40vw"
@@ -235,8 +235,8 @@ export default function AboutPage() {
               <div className="grid gap-6">
                 <div className="relative overflow-hidden rounded-2xl border border-nexino-border aspect-[16/9] shadow-lg shadow-nexino-dark/5">
                   <Image
-                    src="/images/industries/intelligent-infrastructure.jpg"
-                    alt="Smart infrastructure and connected systems in a modern environment"
+                    src="/images/new/industrial-network.jpg"
+                    alt="Industrial networking technology illustration with connected systems"
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 40vw"

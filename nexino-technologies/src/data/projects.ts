@@ -37,7 +37,7 @@ export const projects: Project[] = [
     disclaimer: 'This item is presented as a prototype and does not represent a completed client engagement.',
     relatedProjectSlugs: ['business-operations-dashboard'],
     seo: {
-      title: 'Intelligent Customer Support Assistant — Nexino Technologies',
+      title: 'Intelligent Customer Support Assistant — Nexino Technologies Ltd',
       description: 'An AI prototype for handling customer enquiries automatically with escalation to human support.',
     },
     accentColor: '#0094E8',
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     disclaimer: 'This item is presented as a concept and does not represent a completed client engagement.',
     relatedProjectSlugs: ['intelligent-support-assistant', 'connected-monitoring-system'],
     seo: {
-      title: 'Business Operations Dashboard — Nexino Technologies',
+      title: 'Business Operations Dashboard — Nexino Technologies Ltd',
       description: 'A concept for a real-time business operations dashboard with multi-source data aggregation and automated reporting.',
     },
     accentColor: '#12C878',
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     disclaimer: 'This item is presented as a research prototype and does not represent a completed client engagement.',
     relatedProjectSlugs: ['business-operations-dashboard'],
     seo: {
-      title: 'Connected Monitoring System — Nexino Technologies',
+      title: 'Connected Monitoring System — Nexino Technologies Ltd',
       description: 'A research prototype for IoT environmental monitoring with cloud connectivity and real-time dashboards.',
     },
     accentColor: '#0094E8',

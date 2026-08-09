@@ -3,7 +3,7 @@
 import Link from 'next/link';
 
 const whatsappUrl = `https://wa.me/250781361789?text=${encodeURIComponent(
-  'Hello Nexino Technologies, I would like to discuss a project.',
+  'Hello Nexino Technologies Ltd, I would like to discuss a project.',
 )}`;
 
 export function FloatingWhatsAppButton() {

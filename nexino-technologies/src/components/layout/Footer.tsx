@@ -37,11 +37,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Brand column */}
           <div className="lg:col-span-2 space-y-5">
-            <Link href="/" className="w-fit" aria-label="Nexino Technologies home">
+            <Link href="/" className="w-fit" aria-label="Nexino Technologies Ltd home">
               <BrandLogo className="h-10 lg:h-11" tone="light" />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-              Nexino Technologies helps organisations plan, build and improve websites, digital systems and automation tools that solve real business problems.
+              Nexino Technologies Ltd helps organisations plan, build and improve websites, digital systems and automation tools that solve real business problems.
             </p>
             <div className="space-y-2.5">
               <a
@@ -144,7 +144,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <Container className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white/40">
-            © {year} Nexino Technologies. All rights reserved.
+            © {year} Nexino Technologies Ltd. All rights reserved.
           </p>
           <p className="text-xs text-white/40 font-medium tracking-wide">
             Plan. Build. Support.

@@ -59,7 +59,7 @@ export function WhyNexinoSection() {
       <Container className="relative">
         <div className="mb-14">
           <p className="text-nexino-green text-xs font-bold uppercase tracking-[0.15em] mb-3">
-            Why Nexino Technologies
+            Why Nexino Technologies Ltd
           </p>
           <h2
             id="why-nexino-heading"
@@ -72,7 +72,7 @@ export function WhyNexinoSection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-          <div role="tablist" aria-label="Reasons to choose Nexino Technologies" className="space-y-1">
+          <div role="tablist" aria-label="Reasons to choose Nexino Technologies Ltd" className="space-y-1">
             {reasons.map((reason, i) => (
               <button
                 key={reason.number}

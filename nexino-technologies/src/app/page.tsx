@@ -12,11 +12,11 @@ import { SelectedWorkSection } from '@/components/home/SelectedWorkSection';
 import { CTASection } from '@/components/shared/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Nexino Technologies — Websites, Systems and Automation Built for Growth',
+  title: 'Nexino Technologies Ltd — Websites, Systems and Automation Built for Growth',
   description:
-    'Nexino Technologies helps businesses and organisations design, build and improve websites, digital platforms, business systems, automation tools and intelligent technology solutions.',
+    'Nexino Technologies Ltd helps businesses and organisations design, build and improve websites, digital platforms, business systems, automation tools and intelligent technology solutions.',
   openGraph: {
-    title: 'Nexino Technologies — Websites, Systems and Automation Built for Growth',
+    title: 'Nexino Technologies Ltd — Websites, Systems and Automation Built for Growth',
     description: 'A practical technology partner for organisations that want to build, improve or automate.',
   },
 };

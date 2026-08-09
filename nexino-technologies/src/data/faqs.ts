@@ -2,17 +2,17 @@ import type { FaqItem } from '@/types/common';
 
 export const generalFaqs: FaqItem[] = [
   {
-    question: 'What kind of projects does Nexino Technologies take on?',
+    question: 'What kind of projects does Nexino Technologies Ltd take on?',
     answer: 'We work on digital products, AI and automation systems, cloud infrastructure, data analytics and engineering projects. We are open to new projects, improvements to existing systems, research prototypes and ongoing maintenance.',
     category: 'General',
   },
   {
-    question: 'Where is Nexino Technologies based?',
+    question: 'Where is Nexino Technologies Ltd based?',
     answer: 'We are based in Kicukiro, Kigali, Rwanda. We work with organisations locally and internationally.',
     category: 'General',
   },
   {
-    question: 'How do I start a project with Nexino Technologies?',
+    question: 'How do I start a project with Nexino Technologies Ltd?',
     answer: 'Use the contact form on our website or email us directly. Tell us what you are building or improving and we will respond to arrange a conversation.',
     category: 'General',
   },
@@ -22,7 +22,7 @@ export const generalFaqs: FaqItem[] = [
     category: 'General',
   },
   {
-    question: 'Can Nexino Technologies help if we are not sure what technology we need?',
+    question: 'Can Nexino Technologies Ltd help if we are not sure what technology we need?',
     answer: 'Yes. Our discovery process is designed to help organisations clarify what they need. You do not need to arrive with a technical specification.',
     category: 'General',
   },

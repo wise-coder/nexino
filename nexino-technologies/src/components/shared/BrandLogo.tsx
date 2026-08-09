@@ -16,7 +16,7 @@ export function BrandLogo({ className, tone = 'dark', variant = 'full' }: BrandL
     <div
       className={cn('inline-flex items-center gap-3 select-none', className)}
       role="img"
-      aria-label="Nexino Technologies"
+      aria-label="Nexino Technologies Ltd"
     >
       <svg
         viewBox="0 0 64 64"
@@ -35,10 +35,10 @@ export function BrandLogo({ className, tone = 'dark', variant = 'full' }: BrandL
             Nexino
           </span>
           <span
-            className={cn('font-semibold uppercase tracking-[0.48em]', subtextClass)}
-            style={{ fontSize: '0.58rem' }}
+            className={cn('font-semibold uppercase tracking-[0.22em]', subtextClass)}
+            style={{ fontSize: '0.62rem' }}
           >
-            Technologies
+            Technologies Ltd
           </span>
         </div>
       )}

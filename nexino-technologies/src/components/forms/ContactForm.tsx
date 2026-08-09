@@ -428,7 +428,7 @@ export function ContactForm() {
           {...register('consent')}
         />
         <label htmlFor="consent" className="text-sm text-nexino-text-secondary leading-relaxed cursor-pointer">
-          I agree that Nexino Technologies may use the information I have provided to respond to
+          I agree that Nexino Technologies Ltd may use the information I have provided to respond to
           my enquiry. I understand this does not create any contractual obligation.{' '}
           <span className="text-nexino-blue">*</span>
         </label>

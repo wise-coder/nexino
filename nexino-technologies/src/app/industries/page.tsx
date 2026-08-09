@@ -12,7 +12,7 @@ import { industryImages } from '@/data/image-assets';
 export const metadata: Metadata = {
   title: 'Industry Solutions',
   description:
-    'Nexino Technologies applies software, AI, data and engineering expertise across business, mining, construction, health and infrastructure sectors.',
+    'Nexino Technologies Ltd applies software, AI, data and engineering expertise across business, mining, construction, health and infrastructure sectors.',
 };
 
 const crossCapabilities = [

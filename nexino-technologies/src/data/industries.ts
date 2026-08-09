@@ -39,7 +39,7 @@ export const industries: Industry[] = [
     relatedServiceSlugs: ['custom-web-applications', 'business-chatbots', 'workflow-automation', 'data-analytics'],
     responsibleUseStatement: 'All systems we develop for business use are designed with data privacy, access control and audit trail considerations. We do not make claims about regulatory compliance without a specific review of your context and jurisdiction.',
     seo: {
-      title: 'Business Technology Solutions — Nexino Technologies',
+      title: 'Business Technology Solutions — Nexino Technologies Ltd',
       description: 'Digital systems for business operations, customer communication and workflow automation. Practical technology for growing organisations.',
     },
   },
@@ -81,7 +81,7 @@ export const industries: Industry[] = [
     relatedServiceSlugs: ['embedded-systems', 'data-analytics', 'cloud-infrastructure'],
     responsibleUseStatement: 'Systems described here are presented as technology possibilities. Safety-critical applications in mining require thorough engineering review, regulatory compliance assessment and domain expertise beyond software development alone. We approach these applications with care and in collaboration with mining professionals.',
     seo: {
-      title: 'Mining Technology Solutions — Nexino Technologies',
+      title: 'Mining Technology Solutions — Nexino Technologies Ltd',
       description: 'Technology systems for mining operations including monitoring, data collection and operational dashboards.',
     },
   },
@@ -123,7 +123,7 @@ export const industries: Industry[] = [
     relatedServiceSlugs: ['custom-web-applications', 'mobile-applications', 'data-analytics'],
     responsibleUseStatement: 'Construction technology systems we develop are operational tools designed to improve coordination and visibility. They are not substitutes for engineering judgement, structural assessment or safety certification.',
     seo: {
-      title: 'Construction Technology Solutions — Nexino Technologies',
+      title: 'Construction Technology Solutions — Nexino Technologies Ltd',
       description: 'Digital tools for construction project management, site coordination, progress tracking and document management.',
     },
   },
@@ -165,7 +165,7 @@ export const industries: Industry[] = [
     relatedServiceSlugs: ['custom-web-applications', 'workflow-automation', 'data-analytics'],
     responsibleUseStatement: 'We do not make medical claims about any system we develop. Health technology systems we build are operational and administrative tools. Clinical decisions require qualified medical professionals. We build systems in close consultation with health organisations and with appropriate attention to data sensitivity.',
     seo: {
-      title: 'Health Technology Solutions — Nexino Technologies',
+      title: 'Health Technology Solutions — Nexino Technologies Ltd',
       description: 'Secure digital platforms for health operations, appointment management and patient communication.',
     },
   },
@@ -207,7 +207,7 @@ export const industries: Industry[] = [
     relatedServiceSlugs: ['embedded-systems', 'cloud-infrastructure', 'data-analytics'],
     responsibleUseStatement: 'Intelligent infrastructure systems are designed for monitoring and reporting. Decisions based on sensor data should be reviewed by qualified operators. We design systems with appropriate reliability for their intended use but recommend professional assessment for safety-critical applications.',
     seo: {
-      title: 'Intelligent Infrastructure Solutions — Nexino Technologies',
+      title: 'Intelligent Infrastructure Solutions — Nexino Technologies Ltd',
       description: 'Connected sensor systems, IoT monitoring and automated reporting for physical environments and facilities.',
     },
   },

@@ -12,7 +12,7 @@ import type { ProjectCategory } from '@/types/project';
 export const metadata: Metadata = {
   title: 'Our Work',
   description:
-    'Explore prototypes, concepts and research projects from Nexino Technologies across digital products, AI, cloud infrastructure and engineering systems.',
+    'Explore prototypes, concepts and research projects from Nexino Technologies Ltd across digital products, AI, cloud infrastructure and engineering systems.',
 };
 
 const typeColors: Record<string, string> = {

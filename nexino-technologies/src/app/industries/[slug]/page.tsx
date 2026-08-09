@@ -190,7 +190,7 @@ export default async function IndustryDetailPage({ params }: Props) {
         <Container>
           <AnimatedSection className="mb-12">
             <h2 id="capabilities-heading" className="text-3xl sm:text-4xl font-bold text-nexino-text">
-              Nexino Technologies capabilities for this sector.
+              Nexino Technologies Ltd capabilities for this sector.
             </h2>
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 gap-6" role="list">

@@ -84,7 +84,7 @@ function emailTemplate(payload: z.infer<typeof inquirySchema>) {
         <div style="background:#FFFFFF;border:1px solid #E4E7EC;border-radius:20px;overflow:hidden;box-shadow:0 16px 40px rgba(16,24,40,0.08);">
           <div style="background:#07111F;padding:28px 32px;">
             <div style="display:flex;flex-direction:column;gap:4px;">
-              <div style="color:#FFFFFF;font-size:22px;font-weight:800;letter-spacing:-0.03em;">Nexino Technologies</div>
+              <div style="color:#FFFFFF;font-size:22px;font-weight:800;letter-spacing:-0.03em;">Nexino Technologies Ltd</div>
               <div style="color:#C7D2E2;font-size:13px;">New project enquiry</div>
             </div>
           </div>
@@ -154,10 +154,10 @@ export async function POST(request: Request) {
   });
 
   const { html, text } = emailTemplate(payload);
-  const subject = `New enquiry from ${payload.fullName} - Nexino Technologies`;
+  const subject = `New enquiry from ${payload.fullName} - Nexino Technologies Ltd`;
 
   await transport.sendMail({
-    from: `"Nexino Technologies" <${smtpUser}>`,
+    from: `"Nexino Technologies Ltd" <${smtpUser}>`,
     to: emailTo,
     replyTo: payload.email,
     subject,

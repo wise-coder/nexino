@@ -11,7 +11,7 @@ import { contactFaqs } from '@/data/faqs';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Tell Nexino Technologies about the project you want to build or improve. We will help identify the right next step.',
+    'Tell Nexino Technologies Ltd about the project you want to build or improve. We will help identify the right next step.',
 };
 
 const contactDetails = [

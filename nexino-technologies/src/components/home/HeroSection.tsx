@@ -19,7 +19,7 @@ const NexinoHeroObject = dynamic(
 );
 
 const description =
-  'Nexino Technologies designs and develops professional websites, custom business systems, web applications, automation tools and intelligent digital solutions built around your goals.';
+  'Nexino Technologies Ltd designs and develops professional websites, custom business systems, web applications, automation tools and intelligent digital solutions built around your goals.';
 
 export function HeroSection() {
   const reduceMotion = useReducedMotion() ?? false;

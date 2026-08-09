@@ -6,12 +6,14 @@ import { usePathname } from 'next/navigation';
 import { Menu, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { BrandLogo } from '@/components/shared/BrandLogo';
+import { useThemeMode } from '@/lib/theme';
 import { mainNav } from '@/data/navigation';
 import { MegaMenu } from './MegaMenu';
 import { MobileMenu } from './MobileMenu';
 
 export function Header() {
   const pathname = usePathname();
+  const { theme } = useThemeMode();
   const [scrolled, setScrolled] = useState(false);
   const [activeMega, setActiveMega] = useState<'services' | 'industries' | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -56,6 +58,7 @@ export function Header() {
   };
 
   const isHeroPage = pathname === '/';
+  const isDarkTheme = theme === 'dark';
 
   return (
     <>
@@ -64,7 +67,9 @@ export function Header() {
         className={cn(
           'fixed top-0 left-0 right-0 z-40 transition-all duration-300',
           scrolled || activeMega || !isHeroPage
-            ? 'bg-white/95 backdrop-blur-sm border-b border-nexino-border shadow-sm'
+            ? isDarkTheme
+              ? 'bg-[#07111F]/95 backdrop-blur-sm border-b border-white/10 shadow-sm'
+              : 'bg-white/95 backdrop-blur-sm border-b border-nexino-border shadow-sm'
             : 'bg-transparent',
         )}
         role="banner"
@@ -75,9 +80,9 @@ export function Header() {
             <Link
               href="/"
               className="flex items-center shrink-0"
-              aria-label="Nexino Technologies home"
+              aria-label="Nexino Technologies Ltd home"
             >
-              <BrandLogo className="h-9 lg:h-10" />
+              <BrandLogo className="h-9 lg:h-10" tone={isDarkTheme ? 'light' : 'dark'} />
             </Link>
 
             {/* Desktop nav */}
@@ -101,7 +106,9 @@ export function Header() {
                           'flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-colors',
                           isActive
                             ? 'text-nexino-blue'
-                            : 'text-nexino-text-secondary hover:text-nexino-text',
+                            : isDarkTheme
+                              ? 'text-white/70 hover:text-white'
+                              : 'text-nexino-text-secondary hover:text-nexino-text',
                         )}
                         onClick={() => setActiveMega(activeMega === item.megaMenu ? null : item.megaMenu!)}
                       >
@@ -129,7 +136,9 @@ export function Header() {
                         'block px-3 py-2 text-sm font-medium rounded-lg transition-colors',
                         isActive
                           ? 'text-nexino-blue'
-                          : 'text-nexino-text-secondary hover:text-nexino-text',
+                          : isDarkTheme
+                            ? 'text-white/70 hover:text-white'
+                            : 'text-nexino-text-secondary hover:text-nexino-text',
                       )}
                       aria-current={isActive ? 'page' : undefined}
                     >
@@ -147,12 +156,20 @@ export function Header() {
             <div className="flex items-center gap-3">
               <Link
                 href="/contact?type=project"
-                className="hidden lg:inline-flex items-center gap-2 bg-black text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-neutral-800 transition-colors"
+                className={cn(
+                  'hidden lg:inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full transition-colors',
+                  isDarkTheme
+                    ? 'bg-white text-nexino-dark hover:bg-nexino-off-white'
+                    : 'bg-black text-white hover:bg-neutral-800',
+                )}
               >
                 Start Your Project
               </Link>
               <button
-                className="lg:hidden p-2 rounded-lg hover:bg-nexino-light-grey transition-colors"
+                className={cn(
+                  'lg:hidden p-2 rounded-lg transition-colors',
+                  isDarkTheme ? 'text-white hover:bg-white/10' : 'hover:bg-nexino-light-grey',
+                )}
                 onClick={() => setMobileOpen(true)}
                 aria-label="Open navigation menu"
                 aria-expanded={mobileOpen}

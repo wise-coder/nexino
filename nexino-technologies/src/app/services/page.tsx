@@ -13,7 +13,7 @@ import { serviceImages } from '@/data/image-assets';
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'See how Nexino Technologies can help with websites, custom systems, automation, hosting, data and engineering solutions.',
+    'See how Nexino Technologies Ltd can help with websites, custom systems, automation, hosting, data and engineering solutions.',
 };
 
 const serviceCategories = [

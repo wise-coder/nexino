@@ -7,9 +7,9 @@ import { AnimatedSection } from '@/components/motion/AnimatedSection';
 import { CheckCircle, Target, Eye } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Nexino Technologies',
+  title: 'About Nexino Technologies Ltd',
   description:
-    'Nexino Technologies is a practical technology partner that listens before proposing and supports organisations from planning through launch.',
+    'Nexino Technologies Ltd is a practical technology partner that listens before proposing and supports organisations from planning through launch.',
 };
 
 const principles = [
@@ -53,7 +53,7 @@ export default function AboutPage() {
                 A practical technology partner for organisations ready to improve.
               </h1>
               <p className="text-xl text-white/70 leading-relaxed max-w-2xl">
-                Nexino Technologies listens before proposing, combines business understanding with technical development and supports clients from planning through launch.
+                Nexino Technologies Ltd listens before proposing, combines business understanding with technical development and supports clients from planning through launch.
               </p>
             </div>
 
@@ -102,7 +102,7 @@ export default function AboutPage() {
             <AnimatedSection delay={0.1} direction="left">
               <div className="space-y-5">
                 <p className="text-lg text-nexino-text-secondary leading-relaxed">
-                  Nexino Technologies helps organisations design, build and improve websites, digital platforms, business systems, automation tools and connected technology solutions.
+                  Nexino Technologies Ltd helps organisations design, build and improve websites, digital platforms, business systems, automation tools and connected technology solutions.
                 </p>
                 <p className="text-nexino-text-secondary leading-relaxed">
                   We work through planning, design, development, launch and ongoing support so the solution fits the organisation, not just the brief.

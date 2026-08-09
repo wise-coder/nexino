@@ -13,7 +13,7 @@ export function FloatingWhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Talk to us on WhatsApp"
-      className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-black/20 transition-transform hover:-translate-y-0.5 hover:bg-[#1fb85a] sm:bottom-6 sm:right-6"
+      className="fixed bottom-20 right-5 z-40 inline-flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-black/20 transition-transform hover:-translate-y-0.5 hover:bg-[#1fb85a] sm:bottom-24 sm:right-6"
     >
       <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15" aria-hidden="true">
         <svg

@@ -4,6 +4,7 @@ import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { FloatingWhatsAppButton } from '@/components/layout/FloatingWhatsAppButton';
+import { FloatingChatbot } from '@/components/layout/FloatingChatbot';
 import { ThemeToggle } from '@/components/layout/ThemeToggle';
 import { PageTransition } from '@/components/motion/PageTransition';
 import { SmoothScrollProvider } from '@/components/layout/SmoothScrollProvider';
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <ThemeToggle />
+        <FloatingChatbot />
         <FloatingWhatsAppButton />
       </body>
     </html>

@@ -22,13 +22,13 @@ const base =
 
 const variants = {
   primary:
-    'bg-black text-white hover:bg-neutral-800 active:scale-[0.98] shadow-sm',
+    'bg-nexino-blue text-white hover:bg-nexino-navy active:scale-[0.98] shadow-sm shadow-nexino-blue/20',
   secondary:
-    'bg-black text-white hover:bg-neutral-800 active:scale-[0.98]',
+    'bg-nexino-navy text-white hover:bg-nexino-blue active:scale-[0.98]',
   outline:
-    'border-2 border-black text-black hover:bg-black hover:text-white active:scale-[0.98]',
+    'border-2 border-nexino-blue text-nexino-blue hover:bg-nexino-blue hover:text-white active:scale-[0.98]',
   ghost:
-    'text-black hover:bg-black/5 active:scale-[0.98]',
+    'text-nexino-text hover:bg-nexino-off-white active:scale-[0.98]',
   white:
     'bg-white text-nexino-dark hover:bg-nexino-off-white active:scale-[0.98] shadow-sm',
 };

@@ -1,5 +1,4 @@
-﻿import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -8,13 +7,6 @@ import { FloatingChatbot } from '@/components/layout/FloatingChatbot';
 import { ThemeToggle } from '@/components/layout/ThemeToggle';
 import { PageTransition } from '@/components/motion/PageTransition';
 import { SmoothScrollProvider } from '@/components/layout/SmoothScrollProvider';
-
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  variable: '--font-plus-jakarta',
-  display: 'swap',
-  weight: ['300', '400', '500', '600', '700', '800'],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.nexinotechnologies.com'),
@@ -59,7 +51,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} h-full`} suppressHydrationWarning>
+    <html lang="en" className="h-full" suppressHydrationWarning>
       <body className="min-h-full flex flex-col antialiased" suppressHydrationWarning>
         <script
           dangerouslySetInnerHTML={{
@@ -83,4 +75,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-

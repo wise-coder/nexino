@@ -5,6 +5,7 @@ import { SectionHeading } from '@/components/shared/SectionHeading';
 import { CTASection } from '@/components/shared/CTASection';
 import { AnimatedSection } from '@/components/motion/AnimatedSection';
 import { CheckCircle, Target, Eye } from 'lucide-react';
+import { pageHeroImages } from '@/data/image-assets';
 
 export const metadata: Metadata = {
   title: 'About Nexino Technologies Ltd',
@@ -60,8 +61,8 @@ export default function AboutPage() {
             <AnimatedSection delay={0.1} direction="left">
               <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-2xl shadow-black/20 aspect-[4/5]">
                 <Image
-                  src="/images/new/software-developer-desk.jpg"
-                  alt="Developer working at a desk with a laptop and technical setup"
+                  src={pageHeroImages.about.src}
+                  alt={pageHeroImages.about.alt}
                   fill
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105"
@@ -97,20 +98,24 @@ export default function AboutPage() {
             </AnimatedSection>
             <AnimatedSection delay={0.1} direction="left">
               <div className="space-y-5">
-                <p className="text-lg text-nexino-text-secondary leading-relaxed">
-                  Nexino Technologies Ltd helps organisations design, build and improve websites, digital platforms, business systems, automation tools and connected technology solutions.
+                <p className="text-lg leading-relaxed text-nexino-text-secondary">
+                  Nexino Technologies Ltd helps organisations design, build and improve websites,
+                  digital platforms, business systems, automation tools and connected technology
+                  solutions.
                 </p>
                 <p className="text-nexino-text-secondary leading-relaxed">
-                  We work through planning, design, development, launch and ongoing support so the solution fits the organisation, not just the brief.
+                  We work through planning, design, development, launch and ongoing support so the
+                  solution fits the organisation, not just the brief.
                 </p>
                 <p className="text-nexino-text-secondary leading-relaxed">
-                  We are based in Kigali, Rwanda, and work with organisations locally and internationally.
+                  We are based in Kigali, Rwanda, and work with organisations locally and
+                  internationally.
                 </p>
 
                 <div className="relative overflow-hidden rounded-2xl border border-nexino-border bg-nexino-off-white shadow-lg shadow-nexino-dark/5 aspect-[16/10]">
                   <Image
-                    src="/images/new/laptop-coffee.jpg"
-                    alt="Modern laptop workspace with coffee and plants on a wooden table"
+                    src="/images/about/about-office-building.jpg"
+                    alt="Modern office building interior with a professional collaboration environment"
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 40vw"
@@ -132,7 +137,7 @@ export default function AboutPage() {
         <Container>
           <AnimatedSection className="mb-14 text-center">
             <h2 id="vision-mission-heading" className="text-4xl sm:text-5xl font-bold text-nexino-text">
-              What clients can expect.
+              Mission and vision.
             </h2>
           </AnimatedSection>
           <div className="grid md:grid-cols-2 gap-8">
@@ -141,10 +146,11 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-xl bg-nexino-blue/10 flex items-center justify-center">
                   <Eye className="w-6 h-6 text-nexino-blue" aria-hidden="true" />
                 </div>
-              <h3 className="text-2xl font-bold text-nexino-text">Vision</h3>
-              <p className="text-nexino-text-secondary leading-relaxed text-lg">
-                Clear advice on what is possible, what the project needs and the best practical next step.
-              </p>
+                <h3 className="text-2xl font-bold text-nexino-text">Vision</h3>
+                <p className="text-nexino-text-secondary leading-relaxed text-lg">
+                  To become a globally recognized technology company creating intelligent systems
+                  that improve how humans, businesses, and machines interact with the world.
+                </p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
@@ -152,10 +158,12 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-xl bg-nexino-blue/20 flex items-center justify-center">
                   <Target className="w-6 h-6 text-nexino-blue" aria-hidden="true" />
                 </div>
-              <h3 className="text-2xl font-bold text-white">Mission</h3>
-              <p className="text-white/70 leading-relaxed text-lg">
-                Clear requirements before development, progress updates during the work, review points during delivery and support options after launch.
-              </p>
+                <h3 className="text-2xl font-bold text-white">Mission</h3>
+                <p className="text-white/70 leading-relaxed text-lg">
+                  To research, engineer, and commercialize innovative technologies that combine
+                  artificial intelligence, software, hardware, and intelligent infrastructure to
+                  solve complex real-world challenges.
+                </p>
               </div>
             </AnimatedSection>
           </div>
@@ -228,8 +236,8 @@ export default function AboutPage() {
               <div className="grid gap-6">
                 <div className="relative overflow-hidden rounded-2xl border border-nexino-border aspect-[16/9] shadow-lg shadow-nexino-dark/5">
                   <Image
-                    src="/images/new/industrial-network.jpg"
-                    alt="Industrial networking technology illustration with connected systems"
+                    src="/images/home/industrial-tablet-engineer.jpg"
+                    alt="Engineer using an industrial tablet in a connected technology environment"
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 40vw"

@@ -23,7 +23,7 @@ const inquirySchema = z.object({
   createdAt: z.string().optional(),
 });
 
-const emailTo = process.env.EMAIL_TO || 'nexinotechinologies@gmail.com';
+const emailTo = process.env.EMAIL_TO || 'stevohsunb@gmail.com';
 const smtpHost = process.env.EMAIL_HOST;
 const smtpPort = Number(process.env.EMAIL_PORT || 587);
 const smtpUser = process.env.EMAIL_USER;

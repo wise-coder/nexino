@@ -23,16 +23,16 @@ function TechTrack({ items }: { items: typeof technologies }) {
 export function TechnologyMarqueeSection() {
   return (
     <section
-      className="py-16 lg:py-20 bg-nexino-off-white border-y border-nexino-border"
+      className="border-y border-nexino-border bg-white py-16 lg:py-20"
       aria-labelledby="tech-heading"
     >
       <Container className="mb-10">
         <AnimatedSection>
           <p className="text-xs font-bold uppercase tracking-[0.15em] text-nexino-blue mb-3">
-            Technology
+            Technologies we work with
           </p>
           <h2 id="tech-heading" className="text-3xl sm:text-4xl font-bold text-nexino-text">
-            Tools selected for the problem, <span className="font-semibold text-nexino-text">not the trend.</span>
+            Technologies selected for the problem, <span className="font-semibold text-nexino-text">not the trend.</span>
           </h2>
         </AnimatedSection>
       </Container>

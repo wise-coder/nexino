@@ -6,7 +6,6 @@ import { X, ChevronDown, Mail, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { servicesMegaMenu, industriesMegaMenu } from '@/data/navigation';
 import { cn } from '@/lib/utils';
-import { useThemeMode } from '@/lib/theme';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -14,11 +13,9 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
-  const { theme } = useThemeMode();
   const [servicesOpen, setServicesOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
-  const isDarkTheme = theme === 'dark';
 
   // Lock body scroll and focus close button when open
   useEffect(() => {
@@ -65,21 +62,18 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className={cn(
-              'fixed top-0 right-0 bottom-0 w-full max-w-sm z-50 overflow-y-auto flex flex-col lg:hidden',
-              isDarkTheme ? 'bg-[#07111F] text-white' : 'bg-white text-nexino-text',
-            )}
+            className="fixed top-0 right-0 bottom-0 z-50 flex w-full max-w-sm flex-col overflow-y-auto bg-white text-nexino-text lg:hidden"
             role="dialog"
             aria-modal="true"
             aria-label="Navigation menu"
           >
             {/* Header */}
-            <div className={cn('flex items-center justify-between px-6 py-5 border-b', isDarkTheme ? 'border-white/10' : 'border-nexino-border')}>
-              <span className={cn('font-bold text-lg', isDarkTheme ? 'text-white' : 'text-nexino-dark')}>Menu</span>
+            <div className="flex items-center justify-between border-b border-nexino-border px-6 py-5">
+              <span className="text-lg font-bold text-nexino-dark">Menu</span>
               <button
                 ref={closeButtonRef}
                 onClick={onClose}
-                className={cn('p-2 rounded-lg transition-colors', isDarkTheme ? 'hover:bg-white/10' : 'hover:bg-nexino-light-grey')}
+                className="rounded-lg p-2 transition-colors hover:bg-nexino-light-grey"
                 aria-label="Close menu"
               >
                 <X className="w-5 h-5" aria-hidden="true" />
@@ -100,12 +94,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     <Link
                       href={item.href}
                       onClick={onClose}
-                      className={cn(
-                        'block py-3 px-3 text-lg font-semibold rounded-xl transition-colors',
-                        isDarkTheme
-                          ? 'text-white/85 hover:text-white hover:bg-white/5'
-                          : 'text-nexino-text hover:text-nexino-blue hover:bg-nexino-off-white',
-                      )}
+                      className="block rounded-xl px-3 py-3 text-lg font-semibold text-nexino-text transition-colors hover:bg-nexino-off-white hover:text-nexino-blue"
                     >
                       {item.label}
                     </Link>
@@ -117,12 +106,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   <button
                     onClick={() => setServicesOpen(!servicesOpen)}
                     aria-expanded={servicesOpen}
-                    className={cn(
-                      'w-full flex items-center justify-between py-3 px-3 text-lg font-semibold rounded-xl transition-colors',
-                      isDarkTheme
-                        ? 'text-white/85 hover:text-white hover:bg-white/5'
-                        : 'text-nexino-text hover:text-nexino-blue hover:bg-nexino-off-white',
-                    )}
+                    className="flex w-full items-center justify-between rounded-xl px-3 py-3 text-lg font-semibold text-nexino-text transition-colors hover:bg-nexino-off-white hover:text-nexino-blue"
                   >
                     Services
                     <ChevronDown
@@ -131,7 +115,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     />
                   </button>
                   {servicesOpen && (
-                    <div className={cn('mt-2 ml-3 space-y-4 border-l-2 pl-4', isDarkTheme ? 'border-white/10' : 'border-nexino-border')}>
+                    <div className="mt-2 ml-3 space-y-4 border-l-2 border-nexino-border pl-4">
                       {servicesMegaMenu.map((col) => (
                         <div key={col.heading}>
                           <p className="text-xs font-bold uppercase tracking-wider text-nexino-blue mb-2">
@@ -143,10 +127,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                                 <Link
                                   href={item.href}
                                   onClick={onClose}
-                                  className={cn(
-                                    'block py-1.5 text-sm transition-colors',
-                                    isDarkTheme ? 'text-white/65 hover:text-white' : 'text-nexino-text-secondary hover:text-nexino-blue',
-                                  )}
+                                  className="block py-1.5 text-sm text-nexino-text-secondary transition-colors hover:text-nexino-blue"
                                 >
                                   {item.label}
                                 </Link>
@@ -164,12 +145,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   <button
                     onClick={() => setIndustriesOpen(!industriesOpen)}
                     aria-expanded={industriesOpen}
-                    className={cn(
-                      'w-full flex items-center justify-between py-3 px-3 text-lg font-semibold rounded-xl transition-colors',
-                      isDarkTheme
-                        ? 'text-white/85 hover:text-white hover:bg-white/5'
-                        : 'text-nexino-text hover:text-nexino-blue hover:bg-nexino-off-white',
-                    )}
+                    className="flex w-full items-center justify-between rounded-xl px-3 py-3 text-lg font-semibold text-nexino-text transition-colors hover:bg-nexino-off-white hover:text-nexino-blue"
                   >
                     Industries
                     <ChevronDown
@@ -178,16 +154,13 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     />
                   </button>
                   {industriesOpen && (
-                    <div className={cn('mt-2 ml-3 border-l-2 pl-4 space-y-1', isDarkTheme ? 'border-white/10' : 'border-nexino-border')}>
+                    <div className="mt-2 ml-3 space-y-1 border-l-2 border-nexino-border pl-4">
                       {industriesMegaMenu.map((item) => (
                         <Link
                           key={item.href}
                           href={item.href}
                           onClick={onClose}
-                          className={cn(
-                            'block py-2 text-sm transition-colors',
-                            isDarkTheme ? 'text-white/65 hover:text-white' : 'text-nexino-text-secondary hover:text-nexino-blue',
-                          )}
+                          className="block py-2 text-sm text-nexino-text-secondary transition-colors hover:text-nexino-blue"
                         >
                           {item.label}
                         </Link>
@@ -199,34 +172,25 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </nav>
 
             {/* Footer */}
-            <div className={cn('px-6 py-6 border-t space-y-4', isDarkTheme ? 'border-white/10' : 'border-nexino-border')}>
+            <div className="space-y-4 border-t border-nexino-border px-6 py-6">
               <Link
                 href="/contact?type=project"
                 onClick={onClose}
-                className={cn(
-                  'block w-full text-center font-semibold py-4 rounded-full transition-colors',
-                  isDarkTheme ? 'bg-white text-nexino-dark hover:bg-nexino-off-white' : 'bg-black text-white hover:bg-neutral-800',
-                )}
+                className="block w-full rounded-full bg-nexino-navy py-4 text-center font-semibold text-white transition-colors hover:bg-nexino-blue"
               >
                 Start a Project
               </Link>
               <div className="space-y-2">
                 <a
-                  href="mailto:nexinotechinologies@gmail.com"
-                  className={cn(
-                    'flex items-center gap-2 text-sm transition-colors',
-                    isDarkTheme ? 'text-white/65 hover:text-white' : 'text-nexino-text-secondary hover:text-nexino-blue',
-                  )}
+                  href="mailto:stevohsunb@gmail.com"
+                  className="flex items-center gap-2 text-sm text-nexino-text-secondary transition-colors hover:text-nexino-blue"
                 >
                   <Mail className="w-4 h-4" aria-hidden="true" />
-                  nexinotechinologies@gmail.com
+                  stevohsunb@gmail.com
                 </a>
                 <a
                   href="tel:+250781361789"
-                  className={cn(
-                    'flex items-center gap-2 text-sm transition-colors',
-                    isDarkTheme ? 'text-white/65 hover:text-white' : 'text-nexino-text-secondary hover:text-nexino-blue',
-                  )}
+                  className="flex items-center gap-2 text-sm text-nexino-text-secondary transition-colors hover:text-nexino-blue"
                 >
                   <Phone className="w-4 h-4" aria-hidden="true" />
                   +250 781 361 789

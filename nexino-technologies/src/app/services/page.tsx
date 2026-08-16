@@ -8,6 +8,7 @@ import { CTASection } from '@/components/shared/CTASection';
 import { Accordion } from '@/components/shared/Accordion';
 import { AnimatedSection } from '@/components/motion/AnimatedSection';
 import { generalFaqs } from '@/data/faqs';
+import { pageHeroImages, serviceImages } from '@/data/image-assets';
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -31,8 +32,8 @@ const serviceCategories = [
     highlight: 'bg-nexino-blue/5 border-nexino-blue/20',
     linkHoverClass: 'group-hover:text-nexino-blue',
     image: {
-      src: '/images/new/desktop-devices.jpg',
-      alt: 'Website displayed across desktop, tablet and mobile devices',
+      src: serviceImages['corporate-websites'].src,
+      alt: serviceImages['corporate-websites'].alt,
     },
   },
   {
@@ -49,8 +50,8 @@ const serviceCategories = [
     highlight: 'bg-nexino-green/5 border-nexino-green/20',
     linkHoverClass: 'group-hover:text-nexino-green',
     image: {
-      src: '/images/new/software-developer-desk.jpg',
-      alt: 'Developer working at a desk with a laptop and technical setup',
+      src: serviceImages['ai-agents'].src,
+      alt: serviceImages['ai-agents'].alt,
     },
   },
   {
@@ -65,8 +66,8 @@ const serviceCategories = [
     highlight: 'bg-nexino-blue/5 border-nexino-blue/20',
     linkHoverClass: 'group-hover:text-nexino-blue',
     image: {
-      src: '/images/new/monitor-desk.jpg',
-      alt: 'Modern workstation with multiple monitors in a technical workspace',
+      src: serviceImages['cloud-infrastructure'].src,
+      alt: serviceImages['cloud-infrastructure'].alt,
     },
   },
   {
@@ -81,8 +82,8 @@ const serviceCategories = [
     highlight: 'bg-nexino-green/5 border-nexino-green/20',
     linkHoverClass: 'group-hover:text-nexino-green',
     image: {
-      src: '/images/new/social-communication.jpg',
-      alt: 'Digital communication and social connection concept image',
+      src: serviceImages['data-analytics'].src,
+      alt: serviceImages['data-analytics'].alt,
     },
   },
   {
@@ -98,8 +99,8 @@ const serviceCategories = [
     highlight: 'bg-nexino-blue/5 border-nexino-blue/20',
     linkHoverClass: 'group-hover:text-nexino-blue',
     image: {
-      src: '/images/new/woman-social-phone.jpg',
-      alt: 'Professional using a smartphone for connected digital work',
+      src: serviceImages['embedded-systems'].src,
+      alt: serviceImages['embedded-systems'].alt,
     },
   },
 ];
@@ -136,8 +137,8 @@ export default function ServicesPage() {
             <AnimatedSection delay={0.1} direction="left">
               <div className="relative overflow-hidden rounded-[32px] border border-nexino-border shadow-2xl shadow-nexino-dark/10 aspect-[4/3]">
                 <Image
-                  src="/images/new/desktop-devices.jpg"
-                  alt="Website displayed across desktop, tablet and mobile devices"
+                  src={pageHeroImages.services.src}
+                  alt={pageHeroImages.services.alt}
                   fill
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105"
@@ -151,8 +152,8 @@ export default function ServicesPage() {
                   </span>
                   <div>
                     <p className="text-sm uppercase tracking-[0.18em] text-white/60">What we build</p>
-                    <h2 className="mt-2 text-2xl font-bold leading-tight max-w-md">
-                      Websites, custom systems, automation and support that fit real business needs.
+                  <h2 className="mt-2 text-2xl font-bold leading-tight max-w-md">
+                      Websites, systems, automation and support that fit real business needs.
                     </h2>
                   </div>
                 </div>
@@ -173,8 +174,8 @@ export default function ServicesPage() {
             {serviceCategories.map((cat, i) => (
               <AnimatedSection key={cat.id} delay={i * 0.06}>
                 <div className={`group rounded-2xl border overflow-hidden bg-white ${cat.highlight}`}>
-                  <div className="grid lg:grid-cols-3 gap-0">
-                    <div className="relative min-h-56 lg:min-h-full lg:col-span-1">
+                <div className="grid lg:grid-cols-3 gap-0">
+                  <div className="relative min-h-56 lg:min-h-full lg:col-span-1">
                       <Image
                         src={cat.image.src}
                         alt={cat.image.alt}
@@ -230,8 +231,8 @@ export default function ServicesPage() {
               />
               <div className="mt-8 relative overflow-hidden rounded-[28px] border border-nexino-border aspect-[4/5]">
                 <Image
-                  src="/images/new/cloud-network.jpg"
-                  alt="Cloud computing network illustration with connected digital nodes"
+                  src={serviceImages['cloud-infrastructure'].src}
+                  alt={serviceImages['cloud-infrastructure'].alt}
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 40vw"

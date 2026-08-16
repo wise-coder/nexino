@@ -1,96 +1,86 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Container } from '@/components/shared/Container';
 import { AnimatedSection } from '@/components/motion/AnimatedSection';
 
-const capabilities = [
-  { number: '01', title: 'Clear planning', description: 'We start by understanding the problem, the users and the outcome you need.' },
-  { number: '02', title: 'Business focus', description: 'Every recommendation is tied to a real operational need, not unnecessary features.' },
-  { number: '03', title: 'Responsive communication', description: 'You know what is being worked on, what is complete and what comes next.' },
-  { number: '04', title: 'Maintainable delivery', description: 'We build solutions that can be supported, updated and extended after launch.' },
+const highlights = [
+  'We listen before proposing.',
+  'We plan around real users and workflows.',
+  'We support what we build after launch.',
+  'We work across software, AI, data and devices.',
 ];
-
-const trustMarks = ['Clear scope', 'Practical delivery', 'Support after launch'];
 
 export function CompanyIntroSection() {
   return (
-    <section className="py-20 lg:py-28 bg-white" aria-labelledby="intro-heading">
+    <section className="bg-nexino-off-white py-20 lg:py-28" aria-labelledby="intro-heading">
       <Container>
-        {/* Split layout */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-20 lg:mb-28">
+        <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <AnimatedSection>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-nexino-blue">
+              Who we are
+            </p>
             <h2
               id="intro-heading"
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-nexino-text leading-tight tracking-tight"
+              className="max-w-2xl text-4xl font-bold leading-tight text-nexino-text sm:text-5xl"
             >
-              A technology partner for intelligent systems and digital operations.
+              A technology partner for businesses ready to build, automate and grow.
             </h2>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-nexino-text-secondary">
+              Nexino Technologies Ltd helps organisations design and deliver websites, digital
+              platforms, AI-enabled tools, cloud systems, data products and embedded solutions that
+              are useful in real-world operations.
+            </p>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-nexino-text-secondary">
+              We work through discovery, planning, design, development and support so the final
+              solution fits the problem and the people using it.
+            </p>
+
+            <Link
+              href="/about"
+              className="mt-6 inline-flex items-center gap-2 font-semibold text-nexino-blue transition-all hover:gap-3"
+            >
+              Learn more about Nexino
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
           </AnimatedSection>
+
           <AnimatedSection delay={0.1} direction="left">
-            <div className="space-y-6 lg:pt-4">
-              <p className="text-lg leading-relaxed text-nexino-text-secondary">
-                Every organisation has different goals, users and operational challenges. Nexino starts by understanding what you need, who will use the solution and what success should look like.
-              </p>
-              <p className="text-lg leading-relaxed text-nexino-text-secondary">
-                We then help you plan, engineer and deliver practical technology across software platforms, AI-enabled tools, automation, cloud infrastructure, embedded systems and modern websites where they add value.
-              </p>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 font-semibold text-nexino-blue hover:gap-3 transition-all"
-              >
-                Tell Us About Your Project
-                <ArrowRight className="w-4 h-4" aria-hidden="true" />
-              </Link>
-
-              <div className="flex flex-wrap gap-2 pt-1">
-                {trustMarks.map((mark) => (
-                  <span
-                    key={mark}
-                    className="inline-flex items-center rounded-full border border-nexino-border bg-nexino-off-white px-3 py-1 text-xs font-semibold text-nexino-text-secondary"
-                  >
-                    {mark}
-                  </span>
-                ))}
-              </div>
-
-              <div className="relative overflow-hidden rounded-[28px] border border-nexino-border bg-nexino-off-white shadow-xl shadow-nexino-dark/5">
-                <div className="relative aspect-[4/5]">
+            <div className="grid gap-6">
+              <div className="relative overflow-hidden rounded-[2rem] border border-nexino-border bg-white shadow-xl shadow-nexino-dark/5">
+                <div className="relative aspect-[16/10]">
                   <Image
-                    src="/images/new/team-coding-top-view.jpg"
-                    alt="Team members collaborating around a laptop in an overhead coding session"
+                    src="/images/home/data-center-server-rack.jpg"
+                    alt="Data center server racks with enterprise infrastructure lighting"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 42vw"
+                    sizes="(max-width: 1024px) 100vw, 45vw"
                   />
-                  <div className="absolute inset-0 bg-nexino-dark/70" aria-hidden="true" />
-                  <div className="absolute inset-x-0 bottom-0 p-5 lg:p-6 text-white">
-                    <p className="text-sm font-semibold tracking-[0.02em]">
-                      Clear communication and practical delivery.
+                  <div className="absolute inset-0 bg-nexino-dark/45" />
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/70">
+                      Collaboration
+                    </p>
+                    <p className="mt-2 max-w-md text-lg font-semibold leading-tight">
+                      Teams, research and delivery working together from the start.
                     </p>
                   </div>
                 </div>
               </div>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                {highlights.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-start gap-3 rounded-2xl border border-nexino-border bg-white p-5"
+                  >
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-nexino-green" aria-hidden="true" />
+                    <p className="text-sm leading-relaxed text-nexino-text-secondary">{item}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </AnimatedSection>
-        </div>
-
-        {/* Capability blocks */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-nexino-border" role="list">
-          {capabilities.map((cap, i) => (
-            <AnimatedSection key={cap.number} delay={i * 0.08}>
-              <div
-                className="bg-white p-8 lg:p-10 space-y-4 hover:bg-nexino-off-white transition-colors"
-                role="listitem"
-              >
-                <span className="text-5xl font-bold text-nexino-border select-none" aria-hidden="true">
-                  {cap.number}
-                </span>
-                <h3 className="text-2xl font-bold text-nexino-text">{cap.title}</h3>
-                <p className="text-nexino-text-secondary leading-relaxed">{cap.description}</p>
-              </div>
-            </AnimatedSection>
-          ))}
         </div>
       </Container>
     </section>

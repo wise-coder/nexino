@@ -156,12 +156,12 @@ export function ContactForm() {
       }
 
       setSubmitState('success');
-    } catch {
-      setSubmitState('error');
-      setErrorMessage(
-        'Something went wrong submitting your enquiry. Please email us directly at nexinotechinologies@gmail.com.',
-      );
-    }
+      } catch {
+        setSubmitState('error');
+        setErrorMessage(
+          'Something went wrong submitting your enquiry. Please email us directly at stevohsunb@gmail.com.',
+        );
+      }
   };
 
   if (submitState === 'success') {

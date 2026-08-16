@@ -7,7 +7,7 @@ import { SectionHeading } from '@/components/shared/SectionHeading';
 import { CTASection } from '@/components/shared/CTASection';
 import { AnimatedSection } from '@/components/motion/AnimatedSection';
 import { industries } from '@/data/industries';
-import { industryImages } from '@/data/image-assets';
+import { industryImages, pageHeroImages } from '@/data/image-assets';
 
 export const metadata: Metadata = {
   title: 'Industry Solutions',
@@ -49,8 +49,8 @@ export default function IndustriesPage() {
             <AnimatedSection delay={0.1} direction="left">
               <div className="relative overflow-hidden rounded-[32px] border border-white/10 shadow-2xl shadow-black/20 aspect-[4/3]">
                 <Image
-                  src="/images/new/industrial-network.jpg"
-                  alt="Industrial networking technology illustration with connected systems"
+                  src={pageHeroImages.industries.src}
+                  alt={pageHeroImages.industries.alt}
                   fill
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105"

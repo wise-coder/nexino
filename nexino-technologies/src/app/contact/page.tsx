@@ -7,6 +7,7 @@ import { Accordion } from '@/components/shared/Accordion';
 import { AnimatedSection } from '@/components/motion/AnimatedSection';
 import { ContactForm } from '@/components/forms/ContactForm';
 import { contactFaqs } from '@/data/faqs';
+import { pageHeroImages } from '@/data/image-assets';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -18,8 +19,8 @@ const contactDetails = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'nexinotechinologies@gmail.com',
-    href: 'mailto:nexinotechinologies@gmail.com',
+    value: 'stevohsunb@gmail.com',
+    href: 'mailto:stevohsunb@gmail.com',
   },
   {
     icon: Phone,
@@ -86,9 +87,9 @@ export default function ContactPage() {
 
             <AnimatedSection delay={0.1} direction="left">
               <div className="relative overflow-hidden rounded-[32px] border border-white/10 shadow-2xl shadow-black/20 aspect-[4/3]">
-                <Image
-                  src="/images/new/social-communication.jpg"
-                  alt="Digital communication and social connection concept image"
+              <Image
+                  src={pageHeroImages.contact.src}
+                  alt={pageHeroImages.contact.alt}
                   fill
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105"
@@ -166,10 +167,10 @@ export default function ContactPage() {
                     );
 
                     return (
-                      <li key={`${item.label}-${item.value}`}>
-                        {item.href ? (
-                          <a
-                            href={item.href}
+                    <li key={`${item.label}-${item.value}`}>
+                      {item.href ? (
+                        <a
+                          href={item.href}
                             target={item.external ? '_blank' : undefined}
                             rel={item.external ? 'noopener noreferrer' : undefined}
                           >

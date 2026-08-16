@@ -586,7 +586,7 @@ function buildServicesOverviewAnswer() {
 }
 
 function buildContactAnswer() {
-  return `${buildSupportAnswer()} You can also contact Nexino Technologies Ltd through the form on the website, by email at nexinotechinologies@gmail.com, or via WhatsApp. If you share a clear summary of your project, we can help you decide the best next step.`;
+  return `${buildSupportAnswer()} You can also contact Nexino Technologies Ltd through the form on the website, by email at stevohsunb@gmail.com, or via WhatsApp. If you share a clear summary of your project, we can help you decide the best next step.`;
 }
 
 function findServiceMention(query: string, previousUserQuery?: string) {

@@ -14,7 +14,7 @@
   --color-nexino-border: #E4E7EC;
 
   /* Fonts */
-  --font-sans: var(--font-plus-jakarta), 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Manrope', 'Inter', 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
 
   /* Spacing extras */
   --spacing-section: 6rem;

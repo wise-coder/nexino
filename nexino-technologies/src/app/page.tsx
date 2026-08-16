@@ -3,22 +3,21 @@ import { HeroSection } from '@/components/home/HeroSection';
 import { MarqueeSection } from '@/components/home/MarqueeSection';
 import { CompanyIntroSection } from '@/components/home/CompanyIntroSection';
 import { ServicesSection } from '@/components/home/ServicesSection';
+import { FeaturedSolutionsSection } from '@/components/home/FeaturedSolutionsSection';
 import { TechnologyMarqueeSection } from '@/components/home/TechnologyMarqueeSection';
 import { WhyNexinoSection } from '@/components/home/WhyNexinoSection';
 import { ProcessSection } from '@/components/home/ProcessSection';
 import { IndustriesSection } from '@/components/home/IndustriesSection';
 import { SelectedWorkSection } from '@/components/home/SelectedWorkSection';
-import { CapabilityStatsSection } from '@/components/home/CapabilityStatsSection';
-import { ClientExpectationsSection } from '@/components/home/ClientExpectationsSection';
 import { CTASection } from '@/components/shared/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Nexino Technologies Ltd - Intelligent Systems Built for Growth',
+  title: 'Nexino Technologies — Smart Solutions. Real Impact.',
   description:
-    'Nexino Technologies Ltd helps businesses and organisations design, build and improve intelligent systems, digital platforms, automation tools, cloud solutions and connected technology products.',
+    'Nexino Technologies builds software, AI, data systems and connected technologies that help organisations automate operations and grow.',
   openGraph: {
-    title: 'Nexino Technologies Ltd - Intelligent Systems Built for Growth',
-    description: 'A practical technology partner for organisations that want to build, improve or automate.',
+    title: 'Nexino Technologies — Smart Solutions. Real Impact.',
+    description: 'Engineering intelligent solutions for a changing world.',
   },
 };
 
@@ -29,23 +28,19 @@ export default function HomePage() {
       <MarqueeSection />
       <CompanyIntroSection />
       <ServicesSection />
+      <FeaturedSolutionsSection />
+      <TechnologyMarqueeSection />
       <WhyNexinoSection />
       <ProcessSection />
       <IndustriesSection />
-      <CapabilityStatsSection />
       <SelectedWorkSection />
-      <ClientExpectationsSection />
-      <TechnologyMarqueeSection />
       <CTASection
         label="Ready to start?"
-        tone="dark"
-        title="Have a website, system or technology idea?"
-        description="Tell us what you want to build, improve or automate. You do not need a complete technical document to begin."
-        primaryCta={{ label: 'Start Your Project', href: '/contact?type=project' }}
-        secondaryCta={{ label: 'Contact Nexino', href: '/contact' }}
+        title="Have a challenge technology can solve?"
+        description="Tell us what you are building, improving or automating. We will help identify the next practical step."
+        primaryCta={{ label: 'Start a Project', href: '/contact?type=project' }}
+        secondaryCta={{ label: 'Contact Our Team', href: '/contact' }}
       />
     </>
   );
 }
-
-

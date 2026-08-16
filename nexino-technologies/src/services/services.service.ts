@@ -5,7 +5,7 @@
  */
 
 import type { Service } from '@/types/service';
-import { services, getServiceBySlug } from '@/data/services';
+import { allServices as services, getServiceBySlug } from '@/data/services';
 import { apiRequest, isApiConfigured } from './api-client';
 
 export async function fetchServices(): Promise<Service[]> {

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { services } from '@/data/services';
+import { allServices as services } from '@/data/services';
 import { industries } from '@/data/industries';
 import { projects } from '@/data/projects';
 

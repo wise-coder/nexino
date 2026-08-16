@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+  <defs>
+    <linearGradient id="gL" x1="95" y1="45" x2="95" y2="455" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#0B1D6E"/>
+      <stop offset="60%"  stop-color="#0060CC"/>
+      <stop offset="100%" stop-color="#0094E8"/>
+    </linearGradient>
+    <linearGradient id="gD" x1="120" y1="160" x2="400" y2="455" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#0055BB"/>
+      <stop offset="100%" stop-color="#0094E8"/>
+    </linearGradient>
+    <linearGradient id="gRB" x1="360" y1="200" x2="360" y2="455" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#0088DC"/>
+      <stop offset="100%" stop-color="#0070C8"/>
+    </linearGradient>
+    <linearGradient id="gG" x1="355" y1="45" x2="455" y2="145" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#22F090"/>
+      <stop offset="100%" stop-color="#0FC870"/>
+    </linearGradient>
+  </defs>
+
+  <!-- LEFT LEG: rounded arch at top, width ~85px, full height -->
+  <path d="
+    M 55 455
+    L 55 130
+    Q 55 45 140 45
+    L 165 45
+    Q 215 45 215 130
+    L 215 185
+    L 140 295
+    L 140 455
+    Z
+  " fill="url(#gL)"/>
+
+  <!-- DIAGONAL: ribbon from top-left-inner down-right to bottom-right-inner -->
+  <path d="
+    M 140 295
+    L 215 185
+    L 445 455
+    L 360 455
+    Z
+  " fill="url(#gD)"/>
+
+  <!-- RIGHT LEG BODY: blue, below the green cap -->
+  <path d="
+    M 360 210
+    L 360 455
+    L 445 455
+    L 445 210
+    Z
+  " fill="url(#gRB)"/>
+
+  <!-- GREEN CAP: bright green block at top of right leg -->
+  <path d="
+    M 360 45
+    L 445 45
+    L 445 210
+    L 360 210
+    Z
+  " fill="url(#gG)"/>
+
+</svg>

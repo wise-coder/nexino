@@ -1,86 +1,97 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Container } from '@/components/shared/Container';
 import { AnimatedSection } from '@/components/motion/AnimatedSection';
+import { newVisuals } from '@/data/local-images';
 
-const highlights = [
-  'We listen before proposing.',
-  'We plan around real users and workflows.',
-  'We support what we build after launch.',
-  'We work across software, AI, data and devices.',
+const capabilities = [
+  {
+    number: '01',
+    title: 'Software',
+    description: 'Build user-friendly and scalable digital products.',
+  },
+  {
+    number: '02',
+    title: 'Intelligence',
+    description: 'Apply AI, automation and data to practical workflows.',
+  },
+  {
+    number: '03',
+    title: 'Infrastructure',
+    description: 'Create reliable foundations for digital operations.',
+  },
+  {
+    number: '04',
+    title: 'Engineering',
+    description: 'Connect software, devices and physical environments.',
+  },
 ];
 
 export function CompanyIntroSection() {
   return (
-    <section className="bg-nexino-off-white py-20 lg:py-28" aria-labelledby="intro-heading">
+    <section className="py-20 lg:py-28 bg-white" aria-labelledby="intro-heading">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        {/* Split intro */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start mb-16 lg:mb-20">
           <AnimatedSection>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-nexino-blue">
-              Who we are
-            </p>
             <h2
               id="intro-heading"
-              className="max-w-2xl text-4xl font-bold leading-tight text-nexino-text sm:text-5xl"
+              className="text-[2rem] sm:text-[2.4rem] lg:text-[2.9rem] font-bold text-nexino-dark leading-[1.1] tracking-[-0.025em]"
             >
-              A technology partner for businesses ready to build, automate and grow.
+              One technology partner.{' '}
+              <span className="gradient-nexino-text">Multiple connected capabilities.</span>
             </h2>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-nexino-text-secondary">
-              Nexino Technologies Ltd helps organisations design and deliver websites, digital
-              platforms, AI-enabled tools, cloud systems, data products and embedded solutions that
-              are useful in real-world operations.
-            </p>
-            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-nexino-text-secondary">
-              We work through discovery, planning, design, development and support so the final
-              solution fits the problem and the people using it.
-            </p>
-
-            <Link
-              href="/about"
-              className="mt-6 inline-flex items-center gap-2 font-semibold text-nexino-blue transition-all hover:gap-3"
-            >
-              Learn more about Nexino
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
           </AnimatedSection>
-
           <AnimatedSection delay={0.1} direction="left">
-            <div className="grid gap-6">
-              <div className="relative overflow-hidden rounded-[2rem] border border-nexino-border bg-white shadow-xl shadow-nexino-dark/5">
-                <div className="relative aspect-[16/10]">
-                  <Image
-                    src="/images/home/data-center-server-rack.jpg"
-                    alt="Data center server racks with enterprise infrastructure lighting"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 45vw"
-                  />
-                  <div className="absolute inset-0 bg-nexino-dark/45" />
-                  <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/70">
-                      Collaboration
-                    </p>
-                    <p className="mt-2 max-w-md text-lg font-semibold leading-tight">
-                      Teams, research and delivery working together from the start.
-                    </p>
-                  </div>
-                </div>
+            <div className="space-y-5 lg:pt-2">
+              <div className="relative overflow-hidden rounded-2xl border border-nexino-border bg-nexino-off-white aspect-[16/10]">
+                <Image
+                  src={newVisuals.homeIntro}
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-nexino-dark/35 via-transparent to-transparent" />
               </div>
-
-              <div className="grid gap-3 sm:grid-cols-2">
-                {highlights.map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-start gap-3 rounded-2xl border border-nexino-border bg-white p-5"
-                  >
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-nexino-green" aria-hidden="true" />
-                    <p className="text-sm leading-relaxed text-nexino-text-secondary">{item}</p>
-                  </div>
-                ))}
-              </div>
+              <p className="text-[1rem] leading-[1.75] text-nexino-text-secondary">
+                Nexino Technologies combines strategy, research, design and engineering to turn
+                complex challenges into practical digital systems.
+              </p>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 text-[13.5px] font-semibold text-nexino-blue hover:gap-3 transition-all"
+              >
+                Learn About Nexino
+                <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+              </Link>
             </div>
           </AnimatedSection>
+        </div>
+
+        {/* Capability blocks — horizontal rule dividers */}
+        <div className="border-t border-nexino-border" role="list">
+          {capabilities.map((cap, i) => (
+            <AnimatedSection key={cap.number} delay={i * 0.06}>
+              <div
+                className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-8 py-7 border-b border-nexino-border group hover:bg-nexino-off-white transition-colors px-2 rounded-sm"
+                role="listitem"
+              >
+                <span
+                  className="text-[11px] font-bold uppercase tracking-[0.15em] text-nexino-text-secondary/60 sm:w-12 shrink-0 pt-1"
+                  aria-hidden="true"
+                >
+                  {cap.number}
+                </span>
+                <div className="flex-1 grid sm:grid-cols-2 gap-2">
+                  <h3 className="text-[1.1rem] font-bold text-nexino-dark">{cap.title}</h3>
+                  <p className="text-[0.92rem] text-nexino-text-secondary leading-[1.6]">
+                    {cap.description}
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+          ))}
         </div>
       </Container>
     </section>

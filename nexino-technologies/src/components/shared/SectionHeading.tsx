@@ -29,7 +29,7 @@ export function SectionHeading({
     return (
       <>
         {parts[0]}
-        <span className="font-semibold text-nexino-text">{highlight}</span>
+        <span className="gradient-nexino-text">{highlight}</span>
         {parts[1]}
       </>
     );
@@ -38,7 +38,7 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        'space-y-4',
+        'space-y-3',
         align === 'center' && 'text-center',
         align === 'right' && 'text-right',
         className,
@@ -47,18 +47,18 @@ export function SectionHeading({
       {label && (
         <p
           className={cn(
-            'text-xs font-semibold uppercase tracking-[0.15em]',
+            'text-[11px] font-bold uppercase tracking-[0.18em]',
             isDark ? 'text-nexino-green' : 'text-nexino-blue',
           )}
-          aria-hidden="true"
         >
           {label}
         </p>
       )}
       <h2
         className={cn(
-          'font-bold leading-tight tracking-tight',
-          isDark ? 'text-white' : 'text-nexino-text',
+          'font-bold leading-[1.1] tracking-[-0.025em]',
+          'text-[2rem] sm:text-[2.4rem]',
+          isDark ? 'text-white' : 'text-nexino-dark',
           titleClassName,
         )}
       >
@@ -67,9 +67,9 @@ export function SectionHeading({
       {description && (
         <p
           className={cn(
-            'text-base leading-relaxed max-w-2xl',
+            'text-[0.95rem] leading-[1.75] max-w-2xl',
             align === 'center' && 'mx-auto',
-            isDark ? 'text-white/70' : 'text-nexino-text-secondary',
+            isDark ? 'text-white/60' : 'text-nexino-text-secondary',
           )}
         >
           {description}

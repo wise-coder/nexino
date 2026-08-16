@@ -16,49 +16,49 @@ export function Accordion({ items, theme = 'light', className }: AccordionProps)
   const isDark = theme === 'dark';
 
   return (
-    <div className={cn('space-y-3', className)} role="list">
+    <div className={cn('space-y-2', className)} role="list">
       {items.map((item, index) => {
         const isOpen = openIndex === index;
-        const id = `accordion-item-${index}`;
+        const btnId = `accordion-btn-${index}`;
         const panelId = `accordion-panel-${index}`;
 
         return (
           <div
-            key={id}
+            key={btnId}
             role="listitem"
             className={cn(
               'rounded-xl border transition-colors',
-              isDark ? 'border-white/10 bg-white/5' : 'border-nexino-border bg-white',
-              isOpen && (isDark ? 'border-nexino-blue/40' : 'border-nexino-blue/30'),
+              isDark
+                ? 'border-white/10 bg-white/5'
+                : 'border-nexino-border bg-white',
+              isOpen && (isDark ? 'border-nexino-blue/30' : 'border-nexino-blue/20'),
             )}
           >
             <button
-              id={id}
+              id={btnId}
               aria-expanded={isOpen}
               aria-controls={panelId}
               className={cn(
-                'w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-semibold',
-                isDark ? 'text-white' : 'text-nexino-text',
+                'w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold text-[14px]',
+                isDark ? 'text-white' : 'text-nexino-dark',
               )}
               onClick={() => setOpenIndex(isOpen ? null : index)}
             >
               <span>{item.question}</span>
               <span className="shrink-0">
-                {isOpen ? (
-                  <Minus className="w-4 h-4 text-nexino-blue" aria-hidden="true" />
-                ) : (
-                  <Plus className="w-4 h-4 text-nexino-blue" aria-hidden="true" />
-                )}
+                {isOpen
+                  ? <Minus className="w-3.5 h-3.5 text-nexino-blue" aria-hidden="true" />
+                  : <Plus className="w-3.5 h-3.5 text-nexino-blue" aria-hidden="true" />}
               </span>
             </button>
             <div
               id={panelId}
               role="region"
-              aria-labelledby={id}
+              aria-labelledby={btnId}
               hidden={!isOpen}
               className={cn(
-                'px-6 pb-5 text-sm leading-relaxed',
-                isDark ? 'text-white/70' : 'text-nexino-text-secondary',
+                'px-5 pb-4 text-[13.5px] leading-[1.7]',
+                isDark ? 'text-white/60' : 'text-nexino-text-secondary',
               )}
             >
               {item.answer}

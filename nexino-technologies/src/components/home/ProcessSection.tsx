@@ -1,92 +1,77 @@
-import Image from 'next/image';
 import { Container } from '@/components/shared/Container';
 import { AnimatedSection } from '@/components/motion/AnimatedSection';
 
 const steps = [
-  {
-    number: '01',
-    title: 'Understand',
-    description: 'We learn about your organisation, users and challenge.',
-  },
-  {
-    number: '02',
-    title: 'Plan',
-    description: 'We define requirements, scope and priorities.',
-  },
-  {
-    number: '03',
-    title: 'Design',
-    description: 'We design the user experience and solution architecture.',
-  },
-  {
-    number: '04',
-    title: 'Develop',
-    description: 'We build the website, system or application.',
-  },
-  {
-    number: '05',
-    title: 'Test',
-    description: 'We test functionality, usability and performance.',
-  },
-  {
-    number: '06',
-    title: 'Launch & Support',
-    description: 'We deploy the solution and provide continued support where required.',
-  },
+  { number: '01', title: 'Discover', description: 'Understand the organisation, users, goals and constraints.' },
+  { number: '02', title: 'Research', description: 'Examine the problem, relevant technologies and practical options.' },
+  { number: '03', title: 'Design', description: 'Create the product experience and technical structure.' },
+  { number: '04', title: 'Engineer', description: 'Build maintainable, scalable and secure systems.' },
+  { number: '05', title: 'Validate', description: 'Test functionality, usability and performance.' },
+  { number: '06', title: 'Deploy and Support', description: 'Launch the solution and support continued improvement.' },
 ];
 
 export function ProcessSection() {
   return (
-    <section className="bg-nexino-off-white py-20 lg:py-28" aria-labelledby="process-heading">
+    <section className="py-20 lg:py-28 bg-white" aria-labelledby="process-heading">
       <Container>
-        <div className="mb-14 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-          <AnimatedSection>
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-nexino-blue">
-              How we work
-            </p>
-            <h2 id="process-heading" className="text-4xl font-bold leading-tight text-nexino-text sm:text-5xl">
-              From your idea to a working solution.
-            </h2>
-          </AnimatedSection>
+        <AnimatedSection className="mb-14">
+          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-nexino-blue mb-3">
+            Our Process
+          </p>
+          <h2
+            id="process-heading"
+            className="text-[2rem] sm:text-[2.4rem] font-bold text-nexino-dark tracking-[-0.025em] leading-[1.1]"
+          >
+            From challenge to{' '}
+            <span className="gradient-nexino-text">working solution.</span>
+          </h2>
+        </AnimatedSection>
 
-          <AnimatedSection delay={0.08} direction="left">
-            <div className="relative overflow-hidden rounded-[2rem] border border-nexino-border bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)]">
-              <div className="relative aspect-[16/9]">
-                <Image
-                  src="/images/home/data-center-server-rack.jpg"
-                  alt="Data center server racks showing the infrastructure behind digital products"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 48vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-nexino-dark/75 via-nexino-dark/20 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-5 text-white">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/65">
-                    Delivery rhythm
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-white/85 max-w-xl">
-                    Clear stages, regular review and a pace that keeps everyone aligned.
-                  </p>
-                </div>
-              </div>
+        {/* Desktop timeline */}
+        <div className="hidden lg:block">
+          <div className="relative">
+            <div
+              className="absolute top-[1.65rem] left-0 right-0 h-px bg-nexino-border"
+              aria-hidden="true"
+            />
+            <div className="grid grid-cols-6 gap-4" role="list">
+              {steps.map((step, i) => (
+                <AnimatedSection key={step.number} delay={i * 0.07}>
+                  <div role="listitem" className="relative space-y-4">
+                    <div className="relative z-10 w-[3.3rem] h-[3.3rem] rounded-full border border-nexino-border bg-white flex items-center justify-center">
+                      <span className="text-[11px] font-bold text-nexino-blue">{step.number}</span>
+                    </div>
+                    <div className="space-y-1.5">
+                      <h3 className="text-[14px] font-bold text-nexino-dark">{step.title}</h3>
+                      <p className="text-[12.5px] text-nexino-text-secondary leading-[1.6]">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              ))}
             </div>
-          </AnimatedSection>
+          </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3" role="list">
-          {steps.map((step, index) => (
-            <AnimatedSection key={step.number} delay={index * 0.06}>
-              <div className="group rounded-[1.5rem] border border-nexino-border bg-white p-6 transition-all hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(15,23,42,0.08)]">
-                <div className="mb-6 flex items-center justify-between">
-                  <span className="text-5xl font-bold text-nexino-border select-none" aria-hidden="true">
+        {/* Mobile timeline */}
+        <div className="lg:hidden relative pl-7 border-l border-nexino-border space-y-7" role="list">
+          {steps.map((step, i) => (
+            <AnimatedSection key={step.number} delay={i * 0.05}>
+              <div role="listitem" className="relative">
+                <div
+                  className="absolute -left-[1.95rem] top-0.5 w-[1rem] h-[1rem] rounded-full bg-nexino-blue border-2 border-white shadow-sm"
+                  aria-hidden="true"
+                />
+                <div className="space-y-1">
+                  <p className="text-[10px] font-bold text-nexino-blue uppercase tracking-wider">
                     {step.number}
-                  </span>
-                  <span className="h-2.5 w-2.5 rounded-full bg-nexino-green" aria-hidden="true" />
+                  </p>
+                  <h3 className="text-[14px] font-bold text-nexino-dark">{step.title}</h3>
+                  <p className="text-[13px] text-nexino-text-secondary leading-[1.6]">
+                    {step.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-nexino-text">{step.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-nexino-text-secondary">
-                  {step.description}
-                </p>
               </div>
             </AnimatedSection>
           ))}

@@ -1,97 +1,161 @@
-import Image from 'next/image';
-import { CheckCircle2 } from 'lucide-react';
+'use client';
+
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Container } from '@/components/shared/Container';
-import { AnimatedSection } from '@/components/motion/AnimatedSection';
 
 const reasons = [
   {
+    number: '01',
     title: 'Business-first thinking',
     description:
-      'We begin by understanding the problem before recommending technology.',
+      'We start with your operational challenge, not with technology. Every system we build has a clear business purpose and measurable value.',
   },
   {
-    title: 'Clear project planning',
+    number: '02',
+    title: 'Connected technical expertise',
     description:
-      'We define requirements, priorities and delivery steps before development.',
+      'Our capabilities span software, AI, data, cloud and embedded engineering. Complex challenges often require more than one discipline — we bring them together.',
   },
   {
-    title: 'User-focused design',
-    description:
-      'We build products around the people who will actually use them.',
-  },
-  {
+    number: '03',
     title: 'Scalable engineering',
     description:
-      'We consider maintainability and future growth from the beginning.',
+      'We build for where your organisation is going, not just where it is now. Scalable architecture reduces the cost of growth.',
   },
   {
+    number: '04',
     title: 'Clear communication',
     description:
-      'Clients remain involved throughout the project.',
+      'We translate technical decisions into plain language. You know what is being built, why it matters and what comes next.',
   },
   {
-    title: 'Support after launch',
+    number: '05',
+    title: 'Research-driven decisions',
     description:
-      'Maintenance, improvements and technical assistance can continue after delivery.',
+      'Before we build, we examine the problem and the options. Our recommendations are based on evidence and professional judgment.',
+  },
+  {
+    number: '06',
+    title: 'Long-term support',
+    description:
+      'We do not disappear after delivery. Maintenance, monitoring and ongoing development are part of how we work.',
   },
 ];
 
 export function WhyNexinoSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
-    <section className="bg-nexino-dark py-20 lg:py-28" aria-labelledby="why-nexino-heading">
-      <Container>
-        <div className="mb-14 max-w-3xl">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-nexino-green">
-            Why work with Nexino
+    <section
+      className="py-20 lg:py-28 bg-nexino-dark relative overflow-hidden"
+      aria-labelledby="why-nexino-heading"
+    >
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)',
+            backgroundSize: '52px 52px',
+          }}
+        />
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-nexino-blue/6 blur-[80px]" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-nexino-green/5 blur-[60px]" />
+      </div>
+
+      <Container className="relative">
+        <div className="mb-12">
+          <p className="text-nexino-green text-[11px] font-bold uppercase tracking-[0.18em] mb-3">
+            Why Nexino
           </p>
-          <h2 id="why-nexino-heading" className="text-4xl font-bold leading-tight text-white sm:text-5xl">
-            More than a vendor. A practical technology partner.
+          <h2
+            id="why-nexino-heading"
+            className="text-[2rem] sm:text-[2.4rem] font-bold text-white tracking-[-0.025em] leading-[1.1]"
+          >
+            Built for more than{' '}
+            <span className="gradient-nexino-text">product launch.</span>
           </h2>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <AnimatedSection>
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-[0_24px_60px_rgba(0,0,0,0.22)]">
-              <div className="relative aspect-[4/5]">
-                <Image
-                  src="/images/home/industrial-tablet-engineer.jpg"
-                  alt="Engineer reviewing a digital system on an industrial tablet"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-nexino-dark/80 via-nexino-dark/25 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">
-                    Working style
-                  </p>
-                  <h3 className="mt-2 max-w-md text-2xl font-bold leading-tight">
-                    Collaborative, transparent and built for practical outcomes.
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-
-          <AnimatedSection delay={0.1} direction="left">
-            <div className="grid gap-4 sm:grid-cols-2">
-              {reasons.map((reason, index) => (
-                <div
-                  key={reason.title}
-                  className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 text-white shadow-[0_12px_30px_rgba(0,0,0,0.12)]"
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+          {/* Left — tab list */}
+          <div role="tablist" aria-label="Reasons to choose Nexino" className="space-y-1">
+            {reasons.map((reason, i) => (
+              <button
+                key={reason.number}
+                role="tab"
+                aria-selected={activeIndex === i}
+                aria-controls={`why-panel-${i}`}
+                onClick={() => setActiveIndex(i)}
+                className={`w-full text-left flex items-center gap-4 px-5 py-4 rounded-xl transition-all ${
+                  activeIndex === i
+                    ? 'bg-white/8 border border-white/12'
+                    : 'hover:bg-white/4 border border-transparent'
+                }`}
+              >
+                <span
+                  className={`text-[11px] font-bold tabular-nums w-7 shrink-0 transition-colors ${
+                    activeIndex === i ? 'text-nexino-blue' : 'text-white/25'
+                  }`}
+                  aria-hidden="true"
                 >
-                  <div className="mb-5 flex items-center justify-between">
-                    <span className="text-sm font-bold text-nexino-green">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <CheckCircle2 className="h-5 w-5 text-nexino-green" aria-hidden="true" />
-                  </div>
-                  <h3 className="text-xl font-bold">{reason.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/70">{reason.description}</p>
-                </div>
-              ))}
-            </div>
-          </AnimatedSection>
+                  {reason.number}
+                </span>
+                <span
+                  className={`text-[14px] font-semibold transition-colors ${
+                    activeIndex === i ? 'text-white' : 'text-white/50'
+                  }`}
+                >
+                  {reason.title}
+                </span>
+                {activeIndex === i && (
+                  <div
+                    className="ml-auto w-1.5 h-1.5 rounded-full bg-nexino-blue shrink-0"
+                    aria-hidden="true"
+                  />
+                )}
+              </button>
+            ))}
+          </div>
+
+          {/* Right — panel */}
+          <div className="lg:sticky lg:top-24">
+            {reasons.map((reason, i) => (
+              <div
+                key={reason.number}
+                role="tabpanel"
+                id={`why-panel-${i}`}
+                hidden={activeIndex !== i}
+              >
+                <AnimatePresence mode="wait">
+                  {activeIndex === i && (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 14 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -14 }}
+                      transition={{ duration: 0.35, ease: 'easeOut' }}
+                      className="p-8 rounded-2xl border border-white/10 bg-white/5 space-y-4"
+                    >
+                      <p
+                        className="text-[5rem] font-bold leading-none select-none"
+                        style={{ color: 'rgba(255,255,255,0.06)' }}
+                        aria-hidden="true"
+                      >
+                        {reason.number}
+                      </p>
+                      <h3 className="text-[1.4rem] font-bold text-white">{reason.title}</h3>
+                      <p className="text-white/60 leading-[1.75] text-[0.95rem]">
+                        {reason.description}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </section>
